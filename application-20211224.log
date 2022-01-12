@@ -1,0 +1,200 @@
+2021-12-24 21:54:20.859 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 21:54:20.864 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 21:54:20.864 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - false
+2021-12-24 21:55:55.843 [main] DEBUG history.NewMain - NewMain()[0]: starting application.........
+2021-12-24 21:55:55.889 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 21:55:55.890 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 21:55:55.890 [main] INFO  history.NewMain - false
+2021-12-24 21:56:30.235 [main] DEBUG history.NewMain - NewMain()[0]: starting application.........
+2021-12-24 21:56:30.281 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 21:56:30.281 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 21:56:58.201 [main] DEBUG history.NewMain - NewMain()[0]: starting application.........
+2021-12-24 21:56:58.248 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 21:56:58.249 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 21:56:58.249 [main] INFO  history.NewMain - null
+2021-12-24 21:57:40.216 [main] DEBUG history.NewMain - NewMain()[0]: starting application.........
+2021-12-24 21:57:40.266 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 111, 2: '111', 3: 111.0}
+2021-12-24 21:57:40.266 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 21:57:40.764 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=111, name='111', price=111.0}]
+2021-12-24 21:57:40.765 [main] INFO  history.NewMain - RoofMaterial{id=111, name='111', price=111.0}
+2021-12-24 21:58:34.031 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Нарушение уникального индекса или первичного ключа: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ROOFMATERIAL(ID NULLS FIRST) VALUES ( /* 5 */ CAST(111 AS BIGINT) )"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ROOFMATERIAL(ID NULLS FIRST) VALUES ( /* 5 */ CAST(111 AS BIGINT) )"; SQL statement:
+INSERT INTO ROOFMATERIAL VALUES (?,?,?) [23505-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:508)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:525)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:227)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:189)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:535)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:61)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:173)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:413)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:190)
+	at java.lang.Thread.run(Unknown Source)
+
+2021-12-24 21:58:34.346 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=111, name='111', price=111.0}]
+2021-12-24 21:58:34.350 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - false
+2021-12-24 22:10:41.101 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Нарушение уникального индекса или первичного ключа: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ROOFMATERIAL(ID NULLS FIRST) VALUES ( /* 5 */ CAST(111 AS BIGINT) )"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ROOFMATERIAL(ID NULLS FIRST) VALUES ( /* 5 */ CAST(111 AS BIGINT) )"; SQL statement:
+INSERT INTO ROOFMATERIAL VALUES (?,?,?) [23505-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:508)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:525)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:227)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:189)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:535)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:61)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:173)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:413)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:190)
+	at java.lang.Thread.run(Unknown Source)
+
+2021-12-24 22:10:41.428 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=111, name='111', price=111.0}]
+2021-12-24 22:10:41.434 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - false
+2021-12-24 22:10:55.918 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Нарушение уникального индекса или первичного ключа: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ROOFMATERIAL(ID NULLS FIRST) VALUES ( /* 5 */ CAST(111 AS BIGINT) )"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ROOFMATERIAL(ID NULLS FIRST) VALUES ( /* 5 */ CAST(111 AS BIGINT) )"; SQL statement:
+INSERT INTO ROOFMATERIAL VALUES (?,?,?) [23505-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:508)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:525)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:227)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:189)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:535)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:61)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:173)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:413)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:190)
+	at java.lang.Thread.run(Unknown Source)
+
+2021-12-24 22:10:56.237 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=111, name='111', price=111.0}]
+2021-12-24 22:10:56.241 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - false
+2021-12-24 22:11:27.076 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - org.h2.jdbc.JdbcSQLIntegrityConstraintViolationException: Нарушение уникального индекса или первичного ключа: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ROOFMATERIAL(ID NULLS FIRST) VALUES ( /* 5 */ CAST(111 AS BIGINT) )"
+Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_9 ON PUBLIC.ROOFMATERIAL(ID NULLS FIRST) VALUES ( /* 5 */ CAST(111 AS BIGINT) )"; SQL statement:
+INSERT INTO ROOFMATERIAL VALUES (?,?,?) [23505-202]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:508)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:477)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.index.Index.getDuplicateKeyException(Index.java:525)
+	at org.h2.mvstore.db.MVSecondaryIndex.checkUnique(MVSecondaryIndex.java:227)
+	at org.h2.mvstore.db.MVSecondaryIndex.add(MVSecondaryIndex.java:189)
+	at org.h2.mvstore.db.MVTable.addRow(MVTable.java:535)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:174)
+	at org.h2.command.dml.Insert.update(Insert.java:135)
+	at org.h2.command.dml.DataChangeStatement.update(DataChangeStatement.java:61)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:173)
+	at org.h2.command.Command.executeUpdate(Command.java:247)
+	at org.h2.server.TcpServerThread.process(TcpServerThread.java:413)
+	at org.h2.server.TcpServerThread.run(TcpServerThread.java:190)
+	at java.lang.Thread.run(Unknown Source)
+
+2021-12-24 22:11:27.388 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=111, name='111', price=111.0}]
+2021-12-24 22:11:27.393 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - false
+2021-12-24 22:12:53.915 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=111, name='111', price=111.0}]
+2021-12-24 22:12:53.926 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - RoofMaterial{id=111, name='111', price=111.0}
+2021-12-24 22:14:56.381 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=111, name='111', price=111.0}]
+2021-12-24 22:14:56.390 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - false
+2021-12-24 22:15:53.986 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=111, name='111', price=111.0}]
+2021-12-24 22:15:53.995 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - true
+2021-12-24 23:17:37.676 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640377057669, 2: '111', 3: 111.0}
+2021-12-24 23:17:37.682 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:17:38.006 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640377057669, name='111', price=111.0}]
+2021-12-24 23:17:38.010 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - true
+2021-12-24 23:22:32.560 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640377352553, 2: '111', 3: 111.0}
+2021-12-24 23:22:32.565 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:22:33.064 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640377352553, name='111', price=111.0}]
+2021-12-24 23:22:33.073 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:22:33.073 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:22:33.090 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:22:33.091 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:23:20.821 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:23:20.825 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:23:21.132 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:23:21.133 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:24:01.247 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640377441241, 2: '111', 3: 111.0}
+2021-12-24 23:24:01.252 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:24:01.562 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640377441241, name='111', price=111.0}]
+2021-12-24 23:24:01.583 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:24:01.583 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:24:43.381 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640377483373, 2: '111', 3: 111.0}
+2021-12-24 23:24:43.387 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:24:43.808 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - SUCCESS
+2021-12-24 23:24:43.813 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640377483373, name='111', price=111.0}]
+2021-12-24 23:24:43.832 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - SUCCESS
+2021-12-24 23:24:43.833 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:24:43.834 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:29:26.672 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640377766665, 2: '111', 3: 111.0}
+2021-12-24 23:29:26.677 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:29:26.994 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640377766665, name='111', price=111.0}]
+2021-12-24 23:29:27.013 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:29:27.014 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:33:31.364 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378011358, 2: '111', 3: 111.0}
+2021-12-24 23:33:31.369 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:33:31.704 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378011358, name='222', price=222.0}]
+2021-12-24 23:33:31.709 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378011358, name='222', price=222.0}]
+2021-12-24 23:36:05.213 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378165207, 2: '111', 3: 111.0}
+2021-12-24 23:36:05.218 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:36:05.607 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378165207, name='222', price=222.0}]
+2021-12-24 23:36:05.613 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378165207, name='222', price=222.0}]
+2021-12-24 23:36:25.808 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378185802, 2: '111', 3: 111.0}
+2021-12-24 23:36:25.813 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:36:26.156 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378185802, name='222', price=222.0}]
+2021-12-24 23:42:52.526 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378572516, 2: '111', 3: 111.0}
+2021-12-24 23:42:52.532 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:42:52.914 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378572516, name='222', price=222.0}]
+2021-12-24 23:42:52.919 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378572516, name='222', price=222.0}]
+2021-12-24 23:42:52.919 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - RoofMaterial{id=1640378572516, name='222', price=222.0}
+2021-12-24 23:42:52.921 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378572516, name='222', price=222.0}]
+2021-12-24 23:42:52.936 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep6: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378572936, 2: '111', 3: 111.0}
+2021-12-24 23:42:52.937 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn1: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:42:52.952 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378572936, name='111', price=111.0}]
+2021-12-24 23:42:52.953 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378572936, name='111', price=111.0}]
+2021-12-24 23:42:52.954 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - RoofMaterial{id=1640378572936, name='111', price=111.0}
+2021-12-24 23:42:52.958 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep9: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378572957, 2: '111', 3: 111.0}
+2021-12-24 23:42:52.959 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn2: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:42:52.973 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378572957, name='111', price=111.0}]
+2021-12-24 23:42:52.987 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:42:52.987 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:42:52.989 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:42:52.989 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:42:52.989 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - null
+2021-12-24 23:44:23.585 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378663578, 2: '111', 3: 111.0}
+2021-12-24 23:44:23.589 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:44:23.910 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378663578, name='222', price=222.0}]
+2021-12-24 23:44:23.916 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378663578, name='222', price=222.0}]
+2021-12-24 23:44:23.917 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - updateRoofMaterial{id=1640378663578, name='222', price=222.0}
+2021-12-24 23:44:23.918 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378663578, name='222', price=222.0}]
+2021-12-24 23:44:23.934 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep6: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378663933, 2: '111', 3: 111.0}
+2021-12-24 23:44:23.935 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn1: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:44:23.950 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378663933, name='111', price=111.0}]
+2021-12-24 23:44:23.951 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378663933, name='111', price=111.0}]
+2021-12-24 23:44:23.952 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - createRoofMaterial{id=1640378663933, name='111', price=111.0}
+2021-12-24 23:44:23.955 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep9: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378663954, 2: '111', 3: 111.0}
+2021-12-24 23:44:23.955 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn2: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:44:23.972 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378663954, name='111', price=111.0}]
+2021-12-24 23:44:23.988 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:44:23.988 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:44:23.989 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2021-12-24 23:44:23.989 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2021-12-24 23:44:23.989 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2021-12-24 23:47:46.253 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep0: INSERT INTO ROOFMATERIAL VALUES (?,?,?) {1: 1640378866247, 2: '111', 3: 111.0}
+2021-12-24 23:47:46.258 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2021-12-24 23:47:46.586 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378866247, name='222', price=222.0}]
+2021-12-24 23:47:46.591 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378866247, name='222', price=222.0}]
+2021-12-24 23:47:46.592 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  RoofMaterial{id=1640378866247, name='222', price=222.0}
+2021-12-24 23:47:46.593 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1640378866247, name='222', price=222.0}]
