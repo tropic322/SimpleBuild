@@ -5,18 +5,51 @@
  */
 package entity;
 
+import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 import entity.Template;
+import org.simpleframework.xml.Element;
 
 /**
  *
  * @author Alexandr
  */
 public class MainPartTemplate extends Template {
-    public MainPartTemplate(long id, String name,double PriceMultiplier, int idMaterial) {
+    
+    @CsvBindByName
+    @CsvBindByPosition(position = 4)
+    @Element(name = "VERANDA")
+    private boolean veranda;
+    
+    @CsvBindByName
+    @CsvBindByPosition(position = 5)
+    @Element(name = "WINDOWS")
+    private int windows; 
+
+    public void setVeranda(boolean veranda) {
+        this.veranda = veranda;
+    }
+
+    public void setWindows(int windows) {
+        this.windows = windows;
+    }
+
+    public boolean getVeranda() {
+        return veranda;
+    }
+
+    public int getWindows() {
+        return windows;
+    }
+    public MainPartTemplate(long id, String name,double PriceMultiplier, int idMaterial,boolean veranda,int windows) {
         super(id,name,PriceMultiplier,idMaterial);
+        this.veranda = veranda;
+        this.windows = windows;
     }  
-    public MainPartTemplate(String name,double PriceMultiplier, int idMaterial) {
+    public MainPartTemplate(String name,double PriceMultiplier, int idMaterial,boolean veranda,int windows) {
         super(name,PriceMultiplier,idMaterial);
+        this.veranda = veranda;
+        this.windows = windows;
     }
 
     public MainPartTemplate() {

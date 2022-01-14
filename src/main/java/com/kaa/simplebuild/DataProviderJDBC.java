@@ -126,6 +126,8 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setString(Constants.MAIN_PART_TEMPLATE_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.MAIN_PART_TEMPLATE_PRICEMULTIPLIER_INDEX, obj.getPriceMultiplier());
                     ps.setLong(Constants.MAIN_PART_TEMPLATE_ID_MATERIAL_INDEX, obj.getIdMaterial());
+                    ps.setBoolean(Constants.MAIN_PART_TEMPLATE_VERANDA_INDEX, obj.getVeranda());
+                    ps.setInt(Constants.MAIN_PART_TEMPLATE_WINDOWS_INDEX, obj.getWindows());
                     ps.executeUpdate();
                 
              status = Status.SUCCESS;
@@ -149,6 +151,8 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setString(Constants.ROOF_TEMPLATE_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.ROOF_TEMPLATE_PRICEMULTIPLIER_INDEX, obj.getPriceMultiplier());
                     ps.setLong(Constants.ROOF_TEMPLATE_ID_MATERIAL_INDEX, obj.getIdMaterial());
+                    ps.setBoolean(Constants.ROOF_TEMPLATE_INSULATION_INDEX, obj.getInsulation());
+                    ps.setBoolean(Constants.ROOF_TEMPLATE_PIPE_INDEX, obj.getPipe());
                     ps.executeUpdate();
                 
                 status = Status.SUCCESS;
@@ -282,6 +286,8 @@ public class DataProviderJDBC implements IDataProvider{
                     obj.setName(result.getString(Constants.MAIN_PART_TEMPLATE_NAME));
                     obj.setPriceMultiplier(result.getDouble(Constants.MAIN_PART_TEMPLATE_PRICEMULTIPLIER));
                     obj.setIdMaterial(result.getLong(Constants.MAIN_PART_TEMPLATE_ID_MATERIAL_INDEX));
+                    obj.setVeranda(result.getBoolean(Constants.MAIN_PART_TEMPLATE_VERANDA_INDEX));
+                    obj.setWindows(result.getInt(Constants.MAIN_PART_TEMPLATE_WINDOWS_INDEX));
                     list.add(obj);
             }
             result.close();
@@ -324,6 +330,8 @@ public class DataProviderJDBC implements IDataProvider{
                     obj.setName(result.getString(Constants.ROOF_TEMPLATE_NAME));
                     obj.setPriceMultiplier(result.getDouble(Constants.ROOF_TEMPLATE_PRICEMULTIPLIER));
                     obj.setIdMaterial(result.getLong(Constants.ROOF_TEMPLATE_ID_MATERIAL_INDEX));
+                    obj.setInsulation(result.getBoolean(Constants.ROOF_TEMPLATE_INSULATION_INDEX));
+                    obj.setPipe(result.getBoolean(Constants.ROOF_TEMPLATE_PIPE_INDEX));
                     list.add(obj);
             }
             result.close();

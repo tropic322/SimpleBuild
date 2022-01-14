@@ -68,33 +68,41 @@ public class Constants {
     public static final String DELETE_MAIN_PART_MATERIAL = " DELETE FROM MAINPARTMATERIAL WHERE id= (?)";
     public static final String UPDATE_MAIN_PART_MATERIAL = "UPDATE MAINPARTMATERIAL SET id=(?), name=(?), price=(?) WHERE id=(?)";
     
-    public static final String INSERT_MAIN_PART_TEMPLATE = "INSERT INTO MAINPARTTEMPLATE VALUES (?,?,?,?)";
+    public static final String INSERT_MAIN_PART_TEMPLATE = "INSERT INTO MAINPARTTEMPLATE VALUES (?,?,?,?,?,?)";
     public static final String MAIN_PART_TEMPLATE_ID = "id";
     public static final String MAIN_PART_TEMPLATE_NAME = "name";
     public static final String MAIN_PART_TEMPLATE_PRICEMULTIPLIER = "pricemultiplier";
     public static final String MAIN_PART_TEMPLATE_IDMATERIAL = "id_material";
+    public static final String MAIN_PART_TEMPLATE_VERANDA = "veranda";
+    public static final String MAIN_PART_TEMPLATE_WINDOWS = "windows";
     public static final int MAIN_PART_TEMPLATE_ID_INDEX=1;
     public static final int MAIN_PART_TEMPLATE_NAME_INDEX=2;
     public static final int MAIN_PART_TEMPLATE_PRICEMULTIPLIER_INDEX=3;
     public static final int MAIN_PART_TEMPLATE_ID_MATERIAL_INDEX=4;
-    public static final int MAIN_PART_TEMPLATE_ID_UPDATE_INDEX=5;
+    public static final int MAIN_PART_TEMPLATE_VERANDA_INDEX = 5;
+    public static final int MAIN_PART_TEMPLATE_WINDOWS_INDEX = 6;
+    public static final int MAIN_PART_TEMPLATE_ID_UPDATE_INDEX=7;
     public static final String SELECT_MAIN_PART_TEMPLATE = "SELECT * FROM MAINPARTTEMPLATE ";
     public static final String DELETE_MAIN_PART_TEMPLATE = " DELETE FROM MAINPARTTEMPLATE WHERE id= (?)";
-    public static final String UPDATE_MAIN_PART_TEMPLATE = "UPDATE MAINPARTTEMPLATE SET id=(?), name=(?), pricemutiplier=(?),id_material=(?) WHERE id=(?)";
+    public static final String UPDATE_MAIN_PART_TEMPLATE = "UPDATE MAINPARTTEMPLATE SET id=(?), name=(?), pricemutiplier=(?),id_material=(?),veranda=(?),windows=(?) WHERE id=(?)";
     
-    public static final String INSERT_ROOF_TEMPLATE = "INSERT INTO ROOFTEMPLATE VALUES (?,?,?,?)";
+    public static final String INSERT_ROOF_TEMPLATE = "INSERT INTO ROOFTEMPLATE VALUES (?,?,?,?,?,?)";
     public static final String ROOF_TEMPLATE_ID = "id";
     public static final String ROOF_TEMPLATE_NAME = "name";
     public static final String ROOF_TEMPLATE_PRICEMULTIPLIER = "pricemultiplier";
     public static final String ROOF_TEMPLATE_IDMATERIAL = "id_material";
+    public static final String ROOF_TEMPLATE_INSULATION = "insulation";
+    public static final String ROOF_TEMPLATE_PIPE = "pipe";
     public static final int ROOF_TEMPLATE_ID_INDEX=1;
     public static final int ROOF_TEMPLATE_NAME_INDEX=2;
     public static final int ROOF_TEMPLATE_PRICEMULTIPLIER_INDEX=3;
     public static final int ROOF_TEMPLATE_ID_MATERIAL_INDEX=4;
-    public static final int ROOF_TEMPLATE_ID_UPDATE_INDEX=5;
+    public static final int ROOF_TEMPLATE_INSULATION_INDEX =5;
+    public static final int ROOF_TEMPLATE_PIPE_INDEX =6;
+    public static final int ROOF_TEMPLATE_ID_UPDATE_INDEX=7;
     public static final String SELECT_ROOF_TEMPLATE = "SELECT * FROM ROOFTEMPLATE ";
     public static final String DELETE_ROOF_TEMPLATE = " DELETE FROM ROOFTEMPLATE WHERE id= (?)";
-    public static final String UPDATE_ROOF_TEMPLATE = "UPDATE ROOFTEMPLATE SET id=(?), name=(?), pricemutiplier=(?),id_material=(?) WHERE id=(?)";
+    public static final String UPDATE_ROOF_TEMPLATE = "UPDATE ROOFTEMPLATE SET id=(?), name=(?), pricemutiplier=(?),id_material=(?),insulation=(?),pipe=(?) WHERE id=(?)";
     
     public static final String INSERT_BASEMENT_TEMPLATE = "INSERT INTO BASEMENTTEMPLATE VALUES (?,?,?,?)";
     public static final String BASEMENT_TEMPLATE_ID = "id";

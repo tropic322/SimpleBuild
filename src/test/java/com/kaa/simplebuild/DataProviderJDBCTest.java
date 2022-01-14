@@ -28,7 +28,7 @@ public class DataProviderJDBCTest {
     private static Logger log = LogManager.getLogger(DataProviderJDBCTest.class);
     DataProviderJDBC provider = new DataProviderJDBC();
     
-    @Test
+   /* @Test
     public void TestCreateAndGetByIdRM() {
         boolean test =false;
         RoofMaterial obj = new RoofMaterial("111",111);
@@ -65,6 +65,6 @@ public class DataProviderJDBCTest {
         provider.delRoofMaterial(obj1.getId());
         //log.info(test);
         assertTrue(test);
-    }
+    }*/
     
 }

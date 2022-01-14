@@ -43,7 +43,8 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
     
     
         boolean test =false;
-        RoofMaterial obj = new RoofMaterial(111,"111",111);
+        MainPartTemplate obj = new MainPartTemplate("111",1.0,17,true,3);
+        provider.createMainPartTemplate(obj);
         
         //if(provider.getRoofMaterialById(obj.getId()).equals(obj)){
           //  test = true;
