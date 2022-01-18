@@ -35,6 +35,10 @@ public class DataProviderJDBC implements IDataProvider{
     Connection connection = getConnection();
     public static final Logger logger = LogManager.getLogger(DataProviderJDBC.class);
 
+    public DataProviderJDBC() {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
     ////////////CREATE//////////////////////////////////////////////////////////
     @Override
@@ -48,6 +52,7 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setLong(Constants.ROOF_MATERIAL_ID_INDEX, obj.getId());
                     ps.setString(Constants.ROOF_MATERIAL_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.ROOF_MATERIAL_PRICE_INDEX, obj.getPrice());
+                    ps.setInt(Constants.ROOF_MATERIAL_DURABILITY_YEARS_INDEX, obj.getDurabilityYears());
                     ps.executeUpdate();
                 logger.info(ps);
                 logger.info(connection);
@@ -77,6 +82,7 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setLong(Constants.MAIN_PART_MATERIAL_ID_INDEX, obj.getId());
                     ps.setString(Constants.MAIN_PART_MATERIAL_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.MAIN_PART_MATERIAL_PRICE_INDEX, obj.getPrice());
+                    ps.setDouble(Constants.MAIN_PART_MATERIAL_SOUND_TRANSMISSION_INDEX, obj.getSoundTransmission());
                     ps.executeUpdate();
                 
                 status = Status.SUCCESS;
@@ -100,6 +106,8 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setLong(Constants.BASEMENT_MATERIAL_ID_INDEX, obj.getId());
                     ps.setString(Constants.BASEMENT_MATERIAL_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.BASEMENT_MATERIAL_PRICE_INDEX, obj.getPrice());
+                    ps.setInt(Constants.BASEMENT_MATERIAL_FROST_RESISTANCE_INDEX, obj.getFrostResistance());
+                    ps.setInt(Constants.BASEMENT_MATERIAL_WATERPROOF_INDEX, obj.getWaterproof());
                     ps.executeUpdate();
                 
                 status = Status.SUCCESS;
@@ -176,6 +184,7 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setString(Constants.BASEMENT_TEMPLATE_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.BASEMENT_TEMPLATE_PRICEMULTIPLIER_INDEX, obj.getPriceMultiplier());
                     ps.setLong(Constants.BASEMENT_TEMPLATE_ID_MATERIAL_INDEX, obj.getIdMaterial());
+                    ps.setBoolean(Constants.BASEMENT_TEMPLATE_CELLAR_INDEX, obj.getCellar());
                     ps.executeUpdate();
                 
                 status = Status.SUCCESS;
@@ -225,6 +234,7 @@ public class DataProviderJDBC implements IDataProvider{
                     obj.setId(result.getLong(Constants.ROOF_MATERIAL_ID));
                     obj.setName(result.getString(Constants.ROOF_MATERIAL_NAME));
                     obj.setPrice(result.getDouble(Constants.ROOF_MATERIAL_PRICE));
+                    obj.setDurabilityYears(result.getInt(Constants.ROOF_MATERIAL_DURABILITY_YEARS));
                     list.add(obj);
             }
             result.close();
@@ -245,6 +255,9 @@ public class DataProviderJDBC implements IDataProvider{
                     obj.setId(result.getLong(Constants.BASEMENT_MATERIAL_ID));
                     obj.setName(result.getString(Constants.BASEMENT_MATERIAL_NAME));
                     obj.setPrice(result.getDouble(Constants.BASEMENT_MATERIAL_PRICE));
+                    obj.setFrostResistance(result.getInt(Constants.BASEMENT_MATERIAL_FROST_RESISTANCE));
+                    obj.setWaterproof(result.getInt(Constants.BASEMENT_MATERIAL_WATERPROOF));
+                    
                     list.add(obj);
             }
             result.close();
@@ -265,6 +278,7 @@ public class DataProviderJDBC implements IDataProvider{
                     obj.setId(result.getLong(Constants.MAIN_PART_MATERIAL_ID));
                     obj.setName(result.getString(Constants.MAIN_PART_MATERIAL_NAME));
                     obj.setPrice(result.getDouble(Constants.MAIN_PART_MATERIAL_PRICE));
+                    obj.setSoundTransmission(result.getDouble(Constants.MAIN_PART_MATERIAL_SOUND_TRANSMISSION));
                     list.add(obj);
             }
             result.close();
@@ -309,6 +323,7 @@ public class DataProviderJDBC implements IDataProvider{
                     obj.setName(result.getString(Constants.BASEMENT_TEMPLATE_NAME));
                     obj.setPriceMultiplier(result.getDouble(Constants.BASEMENT_TEMPLATE_PRICEMULTIPLIER));
                     obj.setIdMaterial(result.getLong(Constants.BASEMENT_TEMPLATE_ID_MATERIAL_INDEX));
+                    obj.setCellar(result.getBoolean(Constants.BASEMENT_TEMPLATE_CELLAR_INDEX));
                     list.add(obj);
             }
             result.close();
@@ -494,7 +509,8 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setLong(Constants.ROOF_MATERIAL_ID_INDEX, obj.getId());
                     ps.setString(Constants.ROOF_MATERIAL_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.ROOF_MATERIAL_PRICE_INDEX, obj.getPrice());
-                     ps.setLong(Constants.ROOF_MATERIAL_ID_UPDATE_INDEX, obj.getId());
+                    ps.setInt(Constants.ROOF_MATERIAL_DURABILITY_YEARS_INDEX, obj.getDurabilityYears());
+                    ps.setLong(Constants.ROOF_MATERIAL_ID_UPDATE_INDEX, obj.getId());
                     
                     ps.executeUpdate();
                             
@@ -516,7 +532,9 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setLong(Constants.BASEMENT_MATERIAL_ID_INDEX, obj.getId());
                     ps.setString(Constants.BASEMENT_MATERIAL_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.BASEMENT_MATERIAL_PRICE_INDEX, obj.getPrice());
-                     ps.setLong(Constants.BASEMENT_MATERIAL_ID_UPDATE_INDEX, obj.getId());
+                    ps.setInt(Constants.BASEMENT_MATERIAL_FROST_RESISTANCE_INDEX, obj.getFrostResistance());
+                    ps.setInt(Constants.BASEMENT_MATERIAL_WATERPROOF_INDEX, obj.getWaterproof());
+                    ps.setLong(Constants.BASEMENT_MATERIAL_ID_UPDATE_INDEX, obj.getId());
                     
                     ps.executeUpdate();
                 status = Status.SUCCESS;
@@ -538,6 +556,7 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setLong(Constants.MAIN_PART_MATERIAL_ID_INDEX, obj.getId());
                     ps.setString(Constants.MAIN_PART_MATERIAL_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.MAIN_PART_MATERIAL_PRICE_INDEX, obj.getPrice());
+                    ps.setDouble(Constants.MAIN_PART_MATERIAL_SOUND_TRANSMISSION_INDEX, obj.getSoundTransmission());
                     ps.setLong(Constants.MAIN_PART_MATERIAL_ID_UPDATE_INDEX, obj.getId());
                     
                     ps.executeUpdate();
@@ -562,6 +581,8 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setString(Constants.MAIN_PART_TEMPLATE_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.MAIN_PART_TEMPLATE_PRICEMULTIPLIER_INDEX, obj.getPriceMultiplier());
                     ps.setLong(Constants.MAIN_PART_TEMPLATE_ID_MATERIAL_INDEX, obj.getIdMaterial());
+                    ps.setBoolean(Constants.MAIN_PART_TEMPLATE_VERANDA_INDEX, obj.getVeranda());
+                    ps.setInt(Constants.MAIN_PART_TEMPLATE_WINDOWS_INDEX, obj.getWindows());
                     ps.setLong(Constants.MAIN_PART_TEMPLATE_ID_UPDATE_INDEX, obj.getId());
                     
                     ps.executeUpdate();
@@ -585,7 +606,10 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setString(Constants.ROOF_TEMPLATE_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.ROOF_TEMPLATE_PRICEMULTIPLIER_INDEX, obj.getPriceMultiplier());
                     ps.setLong(Constants.ROOF_TEMPLATE_ID_MATERIAL_INDEX, obj.getIdMaterial());
+                    ps.setBoolean(Constants.ROOF_TEMPLATE_INSULATION_INDEX, obj.getInsulation());
+                    ps.setBoolean(Constants.ROOF_TEMPLATE_PIPE_INDEX, obj.getPipe());
                     ps.setLong(Constants.ROOF_TEMPLATE_ID_UPDATE_INDEX, obj.getId());
+                    
                     
                     ps.executeUpdate();
                 
@@ -609,6 +633,7 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setString(Constants.BASEMENT_TEMPLATE_NAME_INDEX, obj.getName());
                     ps.setDouble(Constants.BASEMENT_TEMPLATE_PRICEMULTIPLIER_INDEX, obj.getPriceMultiplier());
                     ps.setLong(Constants.BASEMENT_TEMPLATE_ID_MATERIAL_INDEX, obj.getIdMaterial());
+                    ps.setBoolean(Constants.BASEMENT_TEMPLATE_CELLAR_INDEX, obj.getCellar());
                     ps.setLong(Constants.BASEMENT_TEMPLATE_ID_UPDATE_INDEX, obj.getId());
                     
                     ps.executeUpdate();
@@ -633,6 +658,7 @@ public class DataProviderJDBC implements IDataProvider{
                     ps.setLong(Constants.BUILDING_TEMPLATE_ID_ROOF_TEMPLATE_INDEX, obj.getIdRoofTemplate());
                     ps.setLong(Constants.BUILDING_TEMPLATE_ID_MAIN_PART_TEMPLATE_INDEX, obj.getIdMainPartTemplate());
                     ps.setLong(Constants.BUILDING_TEMPLATE_ID_BASEMENT_TEMPLATE_INDEX, obj.getIdBasementTemplate());
+                    ps.setLong(Constants.BUILDING_TEMPLATE_ID_UPDATE_INDEX, obj.getId());
                     
                     ps.executeUpdate();
                  
@@ -844,8 +870,7 @@ public class DataProviderJDBC implements IDataProvider{
         }
         
     }
-public DataProviderJDBC() {
-    }
+
    
 
     //Status createRoofMaterial(RoofMaterial obj) {

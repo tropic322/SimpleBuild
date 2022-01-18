@@ -1,21 +1,34 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package entity;
+
+import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
+import org.simpleframework.xml.Element;
 
 /**
  *
  * @author Alexandr
  */
 public class BasementTemplate extends Template {
-    enum Season { WINTER, SPRING, SUMMER, AUTUMN };//////
+    @CsvBindByName
+    @CsvBindByPosition(position = 4)
+    @Element(name = "CELLAR")
+    private boolean cellar;
+
+    public void setCellar(boolean cellar) {
+        this.cellar = cellar;
+    }
+
+    public boolean getCellar() {
+        return cellar;
+    }
     
-    public BasementTemplate(long id, String name,double PriceMultiplier, int idMaterial) {
+    //enum Season { WINTER, SPRING, SUMMER, AUTUMN };//////
+    
+    public BasementTemplate(long id, String name,double PriceMultiplier, int idMaterial, boolean cellar) {
         super(id,name,PriceMultiplier,idMaterial);
     }  
-    public BasementTemplate( String name,double PriceMultiplier, int idMaterial) {
+    public BasementTemplate( String name,double PriceMultiplier, int idMaterial, boolean cellar) {
         super(name,PriceMultiplier,idMaterial);
     }
     public BasementTemplate( ) {
@@ -27,7 +40,8 @@ public class BasementTemplate extends Template {
                 "id=" + getId() +
                 ", name='" + getName() +
                 "' , priceMultiplier=" + getPriceMultiplier()+
-                ", idMaterial=" + getIdMaterial()+ "}";
+                ", idMaterial=" + getIdMaterial()+ 
+                ", cellar=" + getCellar()+"}";
     }
    
 }

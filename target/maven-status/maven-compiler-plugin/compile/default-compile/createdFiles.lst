@@ -5,7 +5,6 @@ entity\RoofTemplate.class
 entity\RoofMaterial.class
 com\kaa\simplebuild\XmlWrap.class
 com\kaa\simplebuild\HistoryContent.class
-entity\BasementTemplate$Season.class
 entity\BasementMaterial.class
 com\kaa\simplebuild\DataProviderCsv.class
 com\kaa\simplebuild\HistoryContent$Status.class

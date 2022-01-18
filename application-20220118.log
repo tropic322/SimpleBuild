@@ -1,0 +1,78 @@
+2022-01-18 19:52:22.299 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - org.h2.jdbc.JdbcSQLException: Соединение разорвано: "java.net.ConnectException: Connection refused: no further information: localhost"
+Connection is broken: "java.net.ConnectException: Connection refused: no further information: localhost" [90067-195]
+2022-01-18 19:52:22.311 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - java.lang.NullPointerException
+2022-01-18 19:52:24.968 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - org.h2.jdbc.JdbcSQLException: Соединение разорвано: "java.net.ConnectException: Connection refused: no further information: localhost"
+Connection is broken: "java.net.ConnectException: Connection refused: no further information: localhost" [90067-195]
+2022-01-18 19:52:24.971 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - java.lang.NullPointerException
+2022-01-18 19:52:27.025 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - org.h2.jdbc.JdbcSQLException: Соединение разорвано: "java.net.ConnectException: Connection refused: no further information: localhost"
+Connection is broken: "java.net.ConnectException: Connection refused: no further information: localhost" [90067-195]
+2022-01-18 19:52:27.029 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - java.lang.NullPointerException
+2022-01-18 19:52:47.362 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  MainPartMaterial{id=1642524767008, name='test', price=1.0, soundTransmission=1.0}
+2022-01-18 19:52:47.369 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep3:  DELETE FROM MAINPARTMATERIAL WHERE id= (?) {1: 1642524767008}
+2022-01-18 19:52:47.370 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-01-18 19:52:47.386 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep4: INSERT INTO ROOFMATERIAL VALUES (?,?,?,?) {1: 1642524767385, 2: 'test', 3: 1.0, 4: 1}
+2022-01-18 19:52:47.386 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn1: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-01-18 19:52:47.399 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1642524767385, name='test', price=1.0, durabilityYears=1}]
+2022-01-18 19:52:47.416 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2022-01-18 19:52:47.416 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.416 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-01-18 19:52:47.417 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2022-01-18 19:52:47.417 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.459 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.460 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-01-18 19:52:47.461 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.488 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  MainPartTemplate{id=1642524767463, name='test2' , priceMultiplier=2.2, idMaterial=2}
+2022-01-18 19:52:47.559 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep24: INSERT INTO ROOFMATERIAL VALUES (?,?,?,?) {1: 1642524767559, 2: 'test', 3: 1.0, 4: 1}
+2022-01-18 19:52:47.560 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn5: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-01-18 19:52:47.581 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1642524767559, name='test2', price=2.0, durabilityYears=2}]
+2022-01-18 19:52:47.582 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  RoofMaterial{id=1642524767559, name='test2', price=2.0, durabilityYears=2}
+2022-01-18 19:52:47.583 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1642524767559, name='test2', price=2.0, durabilityYears=2}]
+2022-01-18 19:52:47.584 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1642524767559, name='test2', price=2.0, durabilityYears=2}]
+2022-01-18 19:52:47.626 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  BasementMaterial{id=1642524767611, name='test', price=1.0, frostResistance=1, waterproof=1}
+2022-01-18 19:52:47.666 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.666 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-01-18 19:52:47.667 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.693 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  BasementTemplate{id=1642524767672, name='test2' , priceMultiplier=2.2, idMaterial=2, cellar=false}
+2022-01-18 19:52:47.734 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.735 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep48:  DELETE FROM BUILDINGTEMPLATE WHERE id= (?) {1: 1642524767721}
+2022-01-18 19:52:47.755 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep52:  DELETE FROM MAINPARTMATERIAL WHERE id= (?) {1: 1642524767744}
+2022-01-18 19:52:47.755 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - conn13: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-01-18 19:52:47.776 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.778 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep55:  DELETE FROM BUILDINGTEMPLATE WHERE id= (?) {1: 1642524767765}
+2022-01-18 19:52:47.787 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.787 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-01-18 19:52:47.788 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.801 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep60:  DELETE FROM MAINPARTMATERIAL WHERE id= (?) {1: 1642524767791}
+2022-01-18 19:52:47.801 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - conn15: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-01-18 19:52:47.809 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.810 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-01-18 19:52:47.810 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.826 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  RoofTemplate{id=1642524767812, name='test' , priceMultiplier=1.0, idMaterial=1, insulation=true, pipe=true}
+2022-01-18 19:52:47.872 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  BuildingTemplate{id=1642524767836, name='test2' , idRoofTenplate=2, idMainPartTemplate=1, idBasementTemplate=1}
+2022-01-18 19:52:47.874 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.874 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep72:  DELETE FROM BUILDINGTEMPLATE WHERE id= (?) {1: 1642524767836}
+2022-01-18 19:52:47.903 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  MainPartMaterial{id=1642524767886, name='test2', price=2.0, soundTransmission=2.0}
+2022-01-18 19:52:47.905 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep78:  DELETE FROM MAINPARTMATERIAL WHERE id= (?) {1: 1642524767886}
+2022-01-18 19:52:47.905 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - conn18: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-01-18 19:52:47.949 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.949 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-01-18 19:52:47.950 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:47.977 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  BasementMaterial{id=1642524767955, name='test2', price=2.0, frostResistance=2, waterproof=2}
+2022-01-18 19:52:48.022 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  MainPartTemplate{id=1642524768015, name='test' , priceMultiplier=1.0, idMaterial=1}
+2022-01-18 19:52:48.043 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:48.043 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-01-18 19:52:48.043 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:48.070 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  RoofTemplate{id=1642524768046, name='test2' , priceMultiplier=1.0, idMaterial=1, insulation=true, pipe=true}
+2022-01-18 19:52:48.088 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  BasementTemplate{id=1642524768081, name='test' , priceMultiplier=1.0, idMaterial=1, cellar=false}
+2022-01-18 19:52:48.100 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep117: INSERT INTO ROOFMATERIAL VALUES (?,?,?,?) {1: 1642524768100, 2: 'test', 3: 1.0, 4: 1}
+2022-01-18 19:52:48.101 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn30: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-01-18 19:52:48.110 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1642524768100, name='test', price=1.0, durabilityYears=1}]
+2022-01-18 19:52:48.110 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  RoofMaterial{id=1642524768100, name='test', price=1.0, durabilityYears=1}
+2022-01-18 19:52:48.111 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1642524768100, name='test', price=1.0, durabilityYears=1}]
+2022-01-18 19:52:48.135 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep125: INSERT INTO ROOFMATERIAL VALUES (?,?,?,?) {1: 1642524768135, 2: 'test', 3: 1.0, 4: 1}
+2022-01-18 19:52:48.136 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn33: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-01-18 19:52:48.142 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1642524768135, name='test', price=1.0, durabilityYears=1}]
+2022-01-18 19:52:48.143 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1642524768135, name='test', price=1.0, durabilityYears=1}]
+2022-01-18 19:52:48.158 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  BuildingTemplate{id=1642524768151, name='test' , idRoofTenplate=2, idMainPartTemplate=1, idBasementTemplate=1}
+2022-01-18 19:52:48.158 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-01-18 19:52:48.159 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep132:  DELETE FROM BUILDINGTEMPLATE WHERE id= (?) {1: 1642524768151}

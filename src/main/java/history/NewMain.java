@@ -9,9 +9,11 @@ import com.kaa.simplebuild.Calculator;
 import com.kaa.simplebuild.DataProviderJDBC;
 import com.kaa.simplebuild.DataProviderXml;
 import com.kaa.simplebuild.IDataProvider;
+import entity.BasementMaterial;
 import entity.BasementTemplate;
 
 import entity.BuildingTemplate;
+import entity.MainPartMaterial;
 import entity.MainPartTemplate;
 import entity.RoofMaterial;
 import entity.RoofTemplate;
@@ -43,8 +45,10 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
     
     
         boolean test =false;
-        MainPartTemplate obj = new MainPartTemplate("111",1.0,17,true,3);
-        provider.createMainPartTemplate(obj);
+        provider.delBasementTemplate(1642359887746L);
+        //RoofTemplate obj = new RoofTemplate(2,"222",2.1,2,true,false);
+        //provider.updateRoofTemplate(obj);
+        //logger.info(provider.getRoofTemplate());
         
         //if(provider.getRoofMaterialById(obj.getId()).equals(obj)){
           //  test = true;

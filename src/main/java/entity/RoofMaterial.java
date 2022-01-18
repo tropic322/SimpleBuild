@@ -6,6 +6,9 @@
 package entity;
 
 
+import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
+import org.simpleframework.xml.Element;
 import org.simpleframework.xml.Root;
 
 /**
@@ -14,13 +17,28 @@ import org.simpleframework.xml.Root;
  */
 @Root( name = "RoofMaterial")
 public class RoofMaterial  extends Material  {
-    public RoofMaterial (long id, String name,double price)
+    @CsvBindByName
+    @CsvBindByPosition(position = 3)
+    @Element(name = "DURABILITY_YEARS")    
+    private int durabilityYears;
+
+   
+    public void setDurabilityYears(int durabilityYears) {
+        this.durabilityYears = durabilityYears;
+    }
+
+    public int getDurabilityYears() {
+        return durabilityYears;
+    }
+    public RoofMaterial (long id, String name,double price,int durabilityYears)
     {
      super(id,name,price);
+     this.durabilityYears =durabilityYears;
     }
-    public RoofMaterial (String name,double price)
+    public RoofMaterial (String name,double price,int durabilityYears)
     {
      super(name,price);
+     this.durabilityYears =durabilityYears;
     }
     public RoofMaterial(){
         
@@ -30,7 +48,8 @@ public class RoofMaterial  extends Material  {
         return "RoofMaterial{" +
                 "id=" + getId() +
                 ", name='" + getName() + '\'' +
-                ", price=" + getPrice() +"}";
+                ", price=" + getPrice() +
+                ", durabilityYears=" + getDurabilityYears() +"}";
     }
     
 }
