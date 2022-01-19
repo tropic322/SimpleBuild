@@ -495,15 +495,18 @@ public class DataProviderCsv implements IDataProvider{
         
         Status status;
         try {
-            CSVWriter csvWriter = new CSVWriter(new FileWriter(ConfigurationUtil.getConfigurationEntry(key)));
-            StatefulBeanToCsv<T> beanToCsv = new StatefulBeanToCsvBuilder<T>(csvWriter).build();
-            beanToCsv.write(list);
-            csvWriter.close();
+            try (CSVWriter csvWriter = new CSVWriter(new FileWriter(ConfigurationUtil.getConfigurationEntry(key)))) {
+                StatefulBeanToCsv<T> beanToCsv = new StatefulBeanToCsvBuilder<T>(csvWriter).build();
+                beanToCsv.write(list);
+            }
             status = Status.SUCCESS;
         } catch (IOException | CsvDataTypeMismatchException | CsvRequiredFieldEmptyException e) {
             logger.error(e);
             status = Status.FAULT;
             
+        }
+        finally{
+                    
         }
          
         IDataProvider.saveHistory(getClass().getName(),method, status, new Gson().toJson(list));

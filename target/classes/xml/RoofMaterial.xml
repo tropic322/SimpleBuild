@@ -1,17 +1,8 @@
 <list>
    <object class="entity.RoofMaterial">
-      <ID>13</ID>
-      <NAME>ad111as</NAME>
-      <PRICE>12.0</PRICE>
-   </object>
-   <object class="entity.RoofMaterial">
-      <ID>13</ID>
-      <NAME>ad111as</NAME>
-      <PRICE>12.0</PRICE>
-   </object>
-   <object class="entity.RoofMaterial">
-      <ID>17</ID>
-      <NAME>axss</NAME>
-      <PRICE>12.0</PRICE>
+      <ID>1642528618857</ID>
+      <NAME>test</NAME>
+      <PRICE>1.0</PRICE>
+      <DURABILITY_YEARS>1</DURABILITY_YEARS>
    </object>
 </list>

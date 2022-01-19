@@ -25,6 +25,7 @@ import org.apache.logging.log4j.Logger;
 
 
 
+
 /**
  *
  * @author Alexandr
@@ -38,14 +39,15 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
     
     public static void main(String[] args) {
         logger.debug("NewMain()[0]: starting application.........");
+        
         IDataProvider dataProvider;
         BuildingTemplate template = null;
         Calculator calculator = new Calculator();
         DataProviderJDBC provider = new DataProviderJDBC();
+        double sumOtherExpenses =0;
     
-    
-        boolean test =false;
-        provider.delBasementTemplate(1642359887746L);
+        //boolean test =false;
+       // provider.delBasementTemplate(1642359887746L);
         //RoofTemplate obj = new RoofTemplate(2,"222",2.1,2,true,false);
         //provider.updateRoofTemplate(obj);
         //logger.info(provider.getRoofTemplate());
@@ -54,7 +56,8 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
           //  test = true;
         //} 
        // logger.info(provider.getRoofMaterialById(111));
-       /* if (args.length == 0){
+       
+        if (args.length == 0){
             System.out.println("No date provider selected");
             logger.error("No date provider selected");
             return;
@@ -80,6 +83,7 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
             logger.error(" Method not selected \n ");
             return;
         }
+        //добавить отображение BT и среднюю стоимость за кв метр
         switch (args[1]){
             case "chooseBuildingTemplate":
                 if (args.length != 3){
@@ -92,7 +96,7 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
                 template = dataProvider.getBuildingTemplateById(id);
                 
                  break;
-            case "InputArea":
+            case "InputArea"://это не должно быть так
                 if (args.length != 3){
                     System.out.println("Invalid number of parameters \n Please enter only 3 parameters \n (dataprovider, method name, home area )");
                     logger.error("insufficient number of parameters");
@@ -112,15 +116,21 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
                     logger.error("insufficient number of parameters");
                     return;
                 }
-                if(template!=null){
+                if(template!=null && calculator.getHouseArea()!=0){
                 double homeCost = calculator.CalculateHomeCost(dataProvider);
-                System.out.println("Hone cost = " + homeCost);
-                logger.info("Method calculateHomeCost completed");
+                System.out.println("Home cost = " + homeCost);
+                logger.info("Method calculate HomeCost completed");
+                return;
                 }
-                else{
+                if(template==null){
                     System.out.println("House template not initialized");
                     logger.error("House template not initialized");
-                    return;
+                    
+                }
+                if(calculator.getHouseArea()==0){
+                    System.out.println("Area of the house is not entered");
+                    logger.error("Area of the house is not entered");
+                    
                 }
                 break;
             case "ChooseMaterial":
@@ -130,25 +140,59 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
                     return;
                 }
                 if(template!=null){
+                long idNewMaterial;
                 switch (args[2]){
                     case "-r":
                         RoofTemplate rt = dataProvider.getRoofTemplateById(template.getIdRoofTemplate());
-                        rt.setIdMaterial(Long.parseLong(args[3], 10));
+                        idNewMaterial =Long.parseLong(args[3], 10);
+                        if(dataProvider.getRoofMaterialById(idNewMaterial)!=null)
+                        {
+                            rt.setIdMaterial(idNewMaterial);
+                        }
+                        else{
+                           System.out.println("Invalid id of material \n Such material does not exist");
+                            logger.error("Invalid id of material"); 
+                            return;
+                        }
+                        
                         System.out.println("Roof material has been changed");
                         logger.info("Roof material has been changed");
                     break;
                     case "-m":
-                        MainPartTemplate mt = dataProvider.getMainPartTemplateById(template.getIdMainPartTemplate());
-                        mt.setIdMaterial(Long.parseLong(args[3], 10));
+                        MainPartTemplate mt = dataProvider.getMainPartTemplateById(template.getIdMainPartTemplate());                        
+                        idNewMaterial =Long.parseLong(args[3], 10);
+                        
+                        if(dataProvider.getMainPartMaterialById(idNewMaterial)!=null)
+                        {
+                            mt.setIdMaterial(idNewMaterial);
+                        }
+                        else{
+                           System.out.println("Invalid id of material \n Such material does not exist");
+                            logger.error("Invalid id of material"); 
+                            return;
+                        }                        
                         System.out.println("Main part material has been changed");
                         logger.info("Main part material has been changed");
                     break;
                     case "-b":
                         BasementTemplate bt = dataProvider.getBasementTemplateById(template.getIdBasementTemplate());
-                        bt.setIdMaterial(Long.parseLong(args[3], 10));
+                        idNewMaterial =Long.parseLong(args[3], 10);
+                        
+                        if(dataProvider.getBasementMaterialById(idNewMaterial)!=null)
+                        {
+                            bt.setIdMaterial(idNewMaterial);
+                        }
+                        else{
+                           System.out.println("Invalid id of material \n Such material does not exist");
+                            logger.error("Invalid id of material"); 
+                            return;
+                        }
                         System.out.println("Basement material has been changed");
                         logger.info("Basement material has been changed");
                     break;
+                    default:
+                        logger.error("Error in choosing a template parameter(-r, -m , -b )");
+                    
                 }
                 }else{
                     System.out.println("House template not initialized");
@@ -157,64 +201,133 @@ private static final Logger logger = LogManager.getLogger(NewMain.class);
                 }
                 
             break;
-            case "CalculateHomeTax":
+            
+            case "CalculateOtherExpenses":
+                switch(args.length){
+                    case (2):
+                    if(calculator.getHouseArea()!=0){                
+                        System.out.println("Home tax = " + calculator.CalculateHomeTax());
+                        sumOtherExpenses = calculator.CalculateHomeTax();
+                        System.out.println("Some of other expenses = " + sumOtherExpenses);
+                        logger.info("Method CalculateOtherExpenses completed");                
+                        
+                    }else{
+                        System.out.println("House area not initialized");
+                        logger.error("House area not initialized");                    
+                        }
+                    break;
+                    
+                    case (3):
+                        if(args[2].equals("-c")){
+                            if(calculator.getHouseArea()!=0){                
+                                System.out.println("Home tax = " + calculator.CalculateHomeTax());
+                                sumOtherExpenses = calculator.CalculateHomeTax();
+                                System.out.println("Connection cost = " + calculator.CalculateConnectionCost());
+                                sumOtherExpenses =calculator.CalculateConnectionCost();
+                                System.out.println("Some of other expenses = " + sumOtherExpenses);
+                                logger.info("Method CalculateOtherExpenses completed");
+                                sumOtherExpenses=0;
+                            }else{
+                                System.out.println("House area not initialized");
+                                logger.error("House area not initialized");                    
+                                }
+                            
+                        }else{
+                            System.out.println("Error in choosing a  parameter");
+                            logger.error("Error in choosing a  parameter");  
+                        }
+                        break;
+                    case (4):
+                        switch(args[2]){
+                        case("-l"):
+                            if(calculator.getHouseArea()!=0){                
+                                System.out.println("Home tax = " + calculator.CalculateHomeTax());
+                                sumOtherExpenses = calculator.CalculateHomeTax();
+                                System.out.println("Land tax = " + calculator.CalculateLandTax(Double.parseDouble(args[3])));
+                                sumOtherExpenses =calculator.CalculateLandTax(Double.parseDouble(args[3]));
+                                System.out.println("Some of other expenses = " + sumOtherExpenses);
+                                logger.info("Method CalculateOtherExpenses completed");
+                                sumOtherExpenses=0;
+                            }else{
+                                System.out.println("House area not initialized");
+                                logger.error("House area not initialized");                    
+                            }
+                         break;
+                         case("-cu"):
+                             if(calculator.getHouseArea()!=0){                
+                                System.out.println("Home tax = " + calculator.CalculateHomeTax());
+                                sumOtherExpenses = calculator.CalculateHomeTax();
+                                System.out.println("Connection cost = " + calculator.CalculateConnectionCost());
+                                sumOtherExpenses =calculator.CalculateConnectionCost();
+                                System.out.println("Cost of using = " + calculator.CalculateConnectionOfUsing(Integer.parseInt(args[3])));
+                                sumOtherExpenses =calculator.CalculateConnectionOfUsing(Integer.parseInt(args[3]));
+                                System.out.println("Some of other expenses = " + sumOtherExpenses);
+                                logger.info("Method CalculateOtherExpenses completed");
+                                sumOtherExpenses=0;
+                            }else{
+                                System.out.println("House area not initialized");
+                                logger.error("House area not initialized");                    
+                            }
+                         break;
+                         default:
+                            System.out.println("Error in choosing a  parameter");
+                            logger.error("Error in choosing a  parameter");
+                            return;
+                        }
+                        case (5):
+                            if(args[2].equals("-l") && args[4].equals("-c")){
+                                if(calculator.getHouseArea()!=0){                
+                                    System.out.println("Home tax = " + calculator.CalculateHomeTax());
+                                    sumOtherExpenses = calculator.CalculateHomeTax();
+                                    System.out.println("Land tax = " + calculator.CalculateLandTax(Double.parseDouble(args[3])));
+                                    sumOtherExpenses =calculator.CalculateLandTax(Double.parseDouble(args[3]));
+                                    System.out.println("Connection cost = " + calculator.CalculateConnectionCost());
+                                    sumOtherExpenses =calculator.CalculateConnectionCost();
+                                
+                                    System.out.println("Some of other expenses = " + sumOtherExpenses);
+                                    logger.info("Method CalculateOtherExpenses completed");
+                                    sumOtherExpenses=0;
+                                }else{
+                                    System.out.println("House area not initialized");
+                                    logger.error("House area not initialized");                    
+                                }
+                            }else{
+                                System.out.println("Error in choosing a  parameter");
+                                logger.error("Error in choosing a  parameter");                    
+                            }
+                        break;
+                        case (6):
+                            if(args[2].equals("-l") && args[4].equals("-cu")){
+                                if(calculator.getHouseArea()!=0){                
+                                    System.out.println("Home tax = " + calculator.CalculateHomeTax());
+                                    sumOtherExpenses = calculator.CalculateHomeTax();
+                                    System.out.println("Land tax = " + calculator.CalculateLandTax(Double.parseDouble(args[3])));
+                                    sumOtherExpenses =calculator.CalculateLandTax(Double.parseDouble(args[3]));
+                                    System.out.println("Connection cost = " + calculator.CalculateConnectionCost());
+                                    sumOtherExpenses =calculator.CalculateConnectionCost();
+                                    System.out.println("Cost of using = " + calculator.CalculateConnectionOfUsing(Integer.parseInt(args[5])));
+                                    sumOtherExpenses =calculator.CalculateConnectionOfUsing(Integer.parseInt(args[5]));
+                                
+                                    System.out.println("Some of other expenses = " + sumOtherExpenses);
+                                    logger.info("Method CalculateOtherExpenses completed");
+                                    sumOtherExpenses=0;
+                                }else{
+                                    System.out.println("House area not initialized");
+                                    logger.error("House area not initialized");                    
+                                }
+                            }else{
+                                System.out.println("Error in choosing a  parameter");
+                                logger.error("Error in choosing a  parameter");                    
+                            }
+                        break;
+                        }
+                    break;
+                    
+                }
                 
-                if (args.length != 2){
-                    System.out.println("Invalid number of parameters \n Please enter only 2 parameters \n (dataprovider, method name )");
-                    logger.error("insufficient number of parameters");
-                    return;
-                }
-                if(calculator.getHouseArea()!=0){
                 
-                System.out.println("Home tax = " + calculator.CalculateHomeTax());
-                logger.info("Method calculateHomeCost completed");
-                }
-                else{
-                    System.out.println("House area not initialized");
-                    logger.error("House area not initialized");
-                    return;
-                }
-                break;
-            case "CalculateLandTax":
-                
-                if (args.length != 3){
-                    System.out.println("Invalid number of parameters \n Please enter only 3 parameters \n (dataprovider, method name, land area )");
-                    logger.error("insufficient number of parameters");
-                    return;
-                }
-                if(Double.parseDouble(args[2])!=0){
-                
-                System.out.println("Land tax = " + calculator.CalculateLandTax());
-                logger.info("Method CalculateLandTax completed");
-                }
-                else{
-                    System.out.println("Land not initialized");
-                    logger.error("House area not initialized");
-                    return;
-                }
-                break;
-            case "CalculateConnectionCost":
-                if (args.length != 2){
-                    System.out.println("Invalid number of parameters \n Please enter only 2 parameters \n (dataprovider, method name )");
-                    logger.error("insufficient number of parameters");
-                    return;
-                }
-                calculator.CalculateConnectionCost();
-                
-                break;
-            case "CalculateConnectionOfUsing":
-                if (args.length != 3){
-                    System.out.println("Invalid number of parameters \n Please enter only 3 parameters \n (dataprovider, method name,  number of residents )");
-                    logger.error("insufficient number of parameters");
-                    return;
-                }
-                calculator.CalculateConnectionOfUsing(Integer.parseInt(args[2]));
-                
-                break;    
-        }*/
-              
+            
+    
     }
-    
-    
     
 }

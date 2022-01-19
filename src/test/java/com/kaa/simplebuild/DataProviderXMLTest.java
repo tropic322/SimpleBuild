@@ -21,13 +21,13 @@ import static org.junit.Assert.*;
  *
  * @author Alexandr
  */
-public class DataProviderJDBCTest {
+public class DataProviderXMLTest {
     
-    public DataProviderJDBCTest() {
+    public DataProviderXMLTest() {
     }
     
-    private static Logger log = LogManager.getLogger(DataProviderJDBCTest.class);
-    DataProviderJDBC provider = new DataProviderJDBC();
+    private static Logger log = LogManager.getLogger(DataProviderXMLTest.class);
+    DataProviderXml provider = new DataProviderXml();
     
     @Test
     public void TestCreateRoofMaterial() {

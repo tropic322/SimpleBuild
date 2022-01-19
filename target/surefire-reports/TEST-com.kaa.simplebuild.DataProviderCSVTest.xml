@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="35" failures="0" name="com.kaa.simplebuild.DataProviderJDBCTest" time="0.541" errors="0" skipped="0">
+<testsuite tests="35" failures="0" name="com.kaa.simplebuild.DataProviderCSVTest" time="3.094" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
@@ -14,6 +14,7 @@
     <property name="user.script" value=""/>
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="test" value="com.kaa.simplebuild.DataProviderCSVTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\Alexandr\Documents\NetBeansProjects\course_f"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
@@ -44,7 +45,7 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="14"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.6\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=com.kaa.simplebuild.DataProviderCSVTest -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.6\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 surefire:test"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-14.0.2"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -59,39 +60,39 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestCreateMainPartMaterial" time="0.045"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestDeleteRoofMaterial" time="0.015"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestDeleteMainPartTemplate" time="0.017"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestUpdateMainPartTemplate" time="0.02"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetByIdBasementTemplate" time="0.013"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestUpdateRoofMaterial" time="0.019"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestCreateBasementMaterial" time="0.015"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestDeleteBasementTemplate" time="0.014"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetMainPartTemplate" time="0.001"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetRoofMaterial" time="0.002"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestUpdateBasementTemplate" time="0.018"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetBasementTemplate" time="0.002"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetByIdBuildingTemplate" time="0.018"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetByIdMainPartMaterial" time="0.015"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestDeleteBuildingTemplate" time="0.262"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestDeleteMainPartMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestCreateRoofTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestUpdateBuildingTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestUpdateMainPartMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetByIdBasementMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestDeleteBasementMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetBuildingTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetMainPartMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestUpdateBasementMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetByIdRoofTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestCreateMainPartTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestDeleteRoofTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetBasementMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestUpdateRoofTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestCreateBasementTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestCreateRoofMaterial" time="0.005"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetRoofTemplate" time="0.003"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetByIdMainPartTemplate" time="0.019"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestGetByIdRoofMaterial" time="0.016"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderJDBCTest" name="TestCreateBuildingTemplate" time="0.022"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestCreateMainPartMaterial" time="1.203"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestDeleteRoofMaterial" time="0.183"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestDeleteMainPartTemplate" time="0.198"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestUpdateMainPartTemplate" time="0.275"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetByIdBasementTemplate" time="0.061"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestUpdateRoofMaterial" time="0.131"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestCreateBasementMaterial" time="0.045"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestDeleteBasementTemplate" time="0.052"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetMainPartTemplate" time="0"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetRoofMaterial" time="0"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestUpdateBasementTemplate" time="0.077"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetBasementTemplate" time="0"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetByIdBuildingTemplate" time="0.03"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetByIdMainPartMaterial" time="0.034"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestDeleteBuildingTemplate" time="0.044"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestDeleteMainPartMaterial" time="0.044"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestCreateRoofTemplate" time="0.041"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestUpdateBuildingTemplate" time="0.067"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestUpdateMainPartMaterial" time="0.051"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetByIdBasementMaterial" time="0.033"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestDeleteBasementMaterial" time="0.031"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetBuildingTemplate" time="0"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetMainPartMaterial" time="0"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestUpdateBasementMaterial" time="0.101"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetByIdRoofTemplate" time="0.04"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestCreateMainPartTemplate" time="0.032"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestDeleteRoofTemplate" time="0.033"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetBasementMaterial" time="0"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestUpdateRoofTemplate" time="0.071"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestCreateBasementTemplate" time="0.024"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestCreateRoofMaterial" time="0.037"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetRoofTemplate" time="0"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetByIdMainPartTemplate" time="0.043"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestGetByIdRoofMaterial" time="0.051"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderCSVTest" name="TestCreateBuildingTemplate" time="0.062"/>
 </testsuite>

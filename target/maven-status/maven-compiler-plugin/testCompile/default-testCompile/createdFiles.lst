@@ -1,2 +1,3 @@
+com\kaa\simplebuild\DataProviderXMLTest.class
 com\kaa\simplebuild\DataProviderJDBCTest.class
-com\kaa\simplebuild\DataProviderJDBCTestt.class
+com\kaa\simplebuild\DataProviderCSVTest.class

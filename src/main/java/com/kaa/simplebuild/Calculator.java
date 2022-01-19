@@ -65,16 +65,15 @@ private double houseArea =0;
         return roofPrice+mainPartPrice+basementPrice;
     }
     public double CalculateHomeTax() 
-    {
-        
+    {        
         int tax = 10;
         return houseArea*tax;
     }
-    public double CalculateLandTax() 
+    public double CalculateLandTax(double landArea) 
     {
         
         double tax = 1.5;
-        return houseArea*tax;
+        return landArea*tax;
     }
     
     public int CalculateConnectionCost() 
