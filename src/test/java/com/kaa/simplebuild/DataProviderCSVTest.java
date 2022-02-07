@@ -241,7 +241,7 @@ public class DataProviderCSVTest {
         provider.createMainPartTemplate(obj);
         provider.delMainPartTemplate(obj.getId());
         
-        log.info("del" + provider.getMainPartTemplateById(obj.getId()));
+        log.info("del " + provider.getMainPartTemplateById(obj.getId()));
         assertTrue(provider.getMainPartTemplateById(obj.getId())==null);
     }
     @Test

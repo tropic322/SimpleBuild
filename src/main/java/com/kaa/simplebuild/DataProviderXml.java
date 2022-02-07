@@ -42,47 +42,77 @@ public class DataProviderXml implements IDataProvider{
     
     @Override
     public Status createRoofMaterial(RoofMaterial obj) {
+        Status status = Status.FAULT;
         List<RoofMaterial> data = read(RoofMaterial.class,Constants.ROOF_MATERIAL_XML);
         data.add(obj);
-        return save(data,Constants.ROOF_MATERIAL_XML,currentThread().getStackTrace()[1].getMethodName());
+        if(getRoofMaterialById(obj.getId())==null){
+        data.add(obj);
+        status = save(data,Constants.ROOF_MATERIAL_XML,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
+        
         
     }
     @Override
     public Status createMainPartMaterial(MainPartMaterial obj) {
+        Status status = Status.FAULT;
         List<MainPartMaterial> data = read(MainPartMaterial.class,Constants.MAIN_PART_MATERIAL_XML);
+        if(getMainPartMaterialById(obj.getId())==null){
         data.add(obj);
-        return save(data,Constants.MAIN_PART_MATERIAL_XML,currentThread().getStackTrace()[1].getMethodName());
+        status = save(data,Constants.MAIN_PART_MATERIAL_XML,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
         
     }
     @Override
-    public Status createBasementMaterial(BasementMaterial b) {
+    public Status createBasementMaterial(BasementMaterial obj) {
+        Status status = Status.FAULT;
         List<BasementMaterial> data = read(BasementMaterial.class,Constants.BASEMENT_MATERIAL_XML);
-        data.add(b);
-        return save(data,Constants.BASEMENT_MATERIAL_XML,currentThread().getStackTrace()[1].getMethodName());
+        if(getBasementMaterialById(obj.getId())==null){
+        data.add(obj);
+        status = save(data,Constants.BASEMENT_MATERIAL_XML,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
     }
     @Override
-    public Status createBasementTemplate(BasementTemplate b) {
+    public Status createBasementTemplate(BasementTemplate obj) {
+        Status status = Status.FAULT;
         List<BasementTemplate> data = read(BasementTemplate.class,Constants.BASEMENT_TEMPLATE_XML);
-        data.add(b);
-        return save(data,Constants.BASEMENT_TEMPLATE_XML,currentThread().getStackTrace()[1].getMethodName());
+        if(getBasementTemplateById(obj.getId())==null){
+        data.add(obj);
+        status = save(data,Constants.BASEMENT_TEMPLATE_XML,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
     }
     @Override
-    public Status createMainPartTemplate(MainPartTemplate b) {
+    public Status createMainPartTemplate(MainPartTemplate obj) {
+        Status status = Status.FAULT;
         List<MainPartTemplate> data = read(MainPartTemplate.class,Constants.MAIN_PART_TEMPLATE_XML);
-        data.add(b);
-        return save(data,Constants.MAIN_PART_TEMPLATE_XML,currentThread().getStackTrace()[1].getMethodName());
+        if(getMainPartTemplateById(obj.getId())==null){
+        data.add(obj);
+        status = save(data,Constants.MAIN_PART_TEMPLATE_XML,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
     }
     @Override
-    public Status createRoofTemplate(RoofTemplate b) {
+    public Status createRoofTemplate(RoofTemplate obj) {
+        Status status = Status.FAULT;
         List<RoofTemplate> data = read(RoofTemplate.class,Constants.ROOF_TEMPLATE_XML);
-        data.add(b);
-        return save(data,Constants.ROOF_TEMPLATE_XML,currentThread().getStackTrace()[1].getMethodName());
+        if(getRoofTemplateById(obj.getId())==null){
+        data.add(obj);
+        status = save(data,Constants.ROOF_TEMPLATE_XML,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
     }
     @Override
-    public Status createBuildingTemplate(BuildingTemplate b) {
+    public Status createBuildingTemplate(BuildingTemplate obj) {
+        Status status = Status.FAULT;
         List<BuildingTemplate> data = read(BuildingTemplate.class,Constants.BUILDING_TEMPLATE_XML);
-        data.add(b);
-        return save(data,Constants.BUILDING_TEMPLATE_XML,currentThread().getStackTrace()[1].getMethodName());
+        if(getBuildingTemplateById(obj.getId())==null){
+        data.add(obj);
+        status = save(data,Constants.BUILDING_TEMPLATE_XML,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
     }
     ////////////////////GETBYID/////////////////////////////////////////////////
 
@@ -293,7 +323,7 @@ public class DataProviderXml implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delRoofMaterial(obj.getId())==Status.SUCCESS)
         {
@@ -309,7 +339,7 @@ public class DataProviderXml implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delMainPartMaterial(obj.getId())==Status.SUCCESS)
         {
@@ -325,7 +355,7 @@ public class DataProviderXml implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delBasementMaterial(obj.getId())==Status.SUCCESS)
         {
@@ -341,7 +371,7 @@ public class DataProviderXml implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delBasementTemplate(obj.getId())==Status.SUCCESS)
         {
@@ -357,7 +387,7 @@ public class DataProviderXml implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delMainPartTemplate(obj.getId())==Status.SUCCESS)
         {
@@ -373,7 +403,7 @@ public class DataProviderXml implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delRoofTemplate(obj.getId())==Status.SUCCESS)
         {
@@ -389,7 +419,7 @@ public class DataProviderXml implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if( delBuildingTemplate(obj.getId())==Status.SUCCESS)
         {

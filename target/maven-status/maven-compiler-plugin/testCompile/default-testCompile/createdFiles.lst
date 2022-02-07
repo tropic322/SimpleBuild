@@ -1,3 +1,7 @@
 com\kaa\simplebuild\DataProviderXMLTest.class
+com\kaa\simplebuild\CalculatorTest.class
+com\kaa\simplebuild\DataProviderCSVTestNegative.class
 com\kaa\simplebuild\DataProviderJDBCTest.class
+com\kaa\simplebuild\DataProviderXMLTestNegative.class
 com\kaa\simplebuild\DataProviderCSVTest.class
+com\kaa\simplebuild\dataProviderJDBCTestNegative.class

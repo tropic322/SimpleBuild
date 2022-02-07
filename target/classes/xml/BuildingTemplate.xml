@@ -1,1 +1,16 @@
-<list/>
+<list>
+   <object class="entity.BuildingTemplate">
+      <ID>1644088507175</ID>
+      <NAME>test2</NAME>
+      <IDROOFTEMPLATE>2</IDROOFTEMPLATE>
+      <IDMAINPARTTEMPLATE>1</IDMAINPARTTEMPLATE>
+      <IDBASEMENTTEMPLATE>1</IDBASEMENTTEMPLATE>
+   </object>
+   <object class="entity.BuildingTemplate">
+      <ID>1644159184910</ID>
+      <NAME>test</NAME>
+      <IDROOFTEMPLATE>2</IDROOFTEMPLATE>
+      <IDMAINPARTTEMPLATE>1</IDMAINPARTTEMPLATE>
+      <IDBASEMENTTEMPLATE>1</IDBASEMENTTEMPLATE>
+   </object>
+</list>

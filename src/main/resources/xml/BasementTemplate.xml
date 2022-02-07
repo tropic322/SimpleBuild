@@ -1,1 +1,9 @@
-<list/>
+<list>
+   <object class="entity.BasementTemplate">
+      <ID>1644088506978</ID>
+      <NAME>test2</NAME>
+      <PRICEMULTIPLIER>2.2</PRICEMULTIPLIER>
+      <IDMATERIAL>2</IDMATERIAL>
+      <CELLAR>false</CELLAR>
+   </object>
+</list>

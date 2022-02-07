@@ -15,6 +15,7 @@
                     <target>1.8</target>
                     <addClasspath>true</addClasspath>
               <mainClass>history.NewMain</mainClass>
+                    <debug>false</debug>
                 </configuration>
             </plugin>
             <plugin>

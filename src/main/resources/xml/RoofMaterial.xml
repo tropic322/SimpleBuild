@@ -5,4 +5,16 @@
       <PRICE>1.0</PRICE>
       <DURABILITY_YEARS>1</DURABILITY_YEARS>
    </object>
+   <object class="entity.RoofMaterial">
+      <ID>1644088506878</ID>
+      <NAME>test2</NAME>
+      <PRICE>2.0</PRICE>
+      <DURABILITY_YEARS>2</DURABILITY_YEARS>
+   </object>
+   <object class="entity.RoofMaterial">
+      <ID>1644088506878</ID>
+      <NAME>test2</NAME>
+      <PRICE>2.0</PRICE>
+      <DURABILITY_YEARS>2</DURABILITY_YEARS>
+   </object>
 </list>

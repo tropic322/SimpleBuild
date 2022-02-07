@@ -36,78 +36,107 @@ public class DataProviderCsv implements IDataProvider{
     ///////////////CREATE///////////////////////////////////////////////////////
     @Override
     public Status createRoofMaterial(RoofMaterial obj) {
+        Status status = Status.FAULT;
         List<Object> entitylist = new ArrayList<>();
         if(read(obj.getClass(),Constants.ROOF_MATERIAL_CSV).isPresent()){
             entitylist = read(obj.getClass(), Constants.ROOF_MATERIAL_CSV).get();
         }
+        if(getRoofMaterialById(obj.getId())==null){
         entitylist.add(obj);
-         return save(entitylist, Constants.ROOF_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
+        status = save(entitylist, Constants.ROOF_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
+        
+        }
+         return status;
         
 
     }
     @Override
     public Status createMainPartMaterial(MainPartMaterial obj) {
+        Status status = Status.FAULT;
         List<Object> entitylist = new ArrayList<>();
         if(read(obj.getClass(),Constants.MAIN_PART_MATERIAL_CSV).isPresent()){
             entitylist = read(obj.getClass(), Constants.MAIN_PART_MATERIAL_CSV).get();
         }
+        if(getMainPartMaterialById(obj.getId())==null){
         entitylist.add(obj);
-        return save(entitylist, Constants.MAIN_PART_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
+        status = save(entitylist, Constants.MAIN_PART_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
         //IDataProvider.saveHistory(getClass().getName(), historyContentStatus, new Gson().toJson(obj));
 
     }
     @Override
     public Status createBasementMaterial(BasementMaterial obj) {
+        Status status = Status.FAULT;
         List<Object> entitylist = new ArrayList<>();
         if(read(obj.getClass(),Constants.BASEMENT_MATERIAL_CSV).isPresent()){
             entitylist = read(obj.getClass(), Constants.BASEMENT_MATERIAL_CSV).get();
         }
+        if(getBasementMaterialById(obj.getId())==null){
         entitylist.add(obj);
-        return save(entitylist, Constants.BASEMENT_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
+        status = save(entitylist, Constants.BASEMENT_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
         
 
     }
     @Override
     public Status createRoofTemplate(RoofTemplate obj) {
+        Status status = Status.FAULT;
         List<Object> entitylist = new ArrayList<>();
         if(read(obj.getClass(),Constants.ROOF_TEMPLATE_CSV).isPresent()){
             entitylist = read(obj.getClass(), Constants.ROOF_TEMPLATE_CSV).get();
         }
+        if(getRoofTemplateById(obj.getId())==null){
         entitylist.add(obj);
-        return save(entitylist, Constants.ROOF_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
+        status = save(entitylist, Constants.ROOF_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
         
 
     }
     @Override
     public Status createMainPartTemplate(MainPartTemplate obj) {
+        Status status = Status.FAULT;
         List<Object> entitylist = new ArrayList<>();
         if(read(obj.getClass(),Constants.MAIN_PART_TEMPLATE_CSV).isPresent()){
             entitylist = read(obj.getClass(), Constants.MAIN_PART_TEMPLATE_CSV).get();
         }
+        if(getMainPartTemplateById(obj.getId())==null){
         entitylist.add(obj);
-        return save(entitylist, Constants.MAIN_PART_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
+        status = save(entitylist, Constants.MAIN_PART_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
         
 
     }
     @Override
     public Status createBasementTemplate(BasementTemplate obj) {
+        Status status = Status.FAULT;
         List<Object> entitylist = new ArrayList<>();
         if(read(obj.getClass(),Constants.BASEMENT_TEMPLATE_CSV).isPresent()){
             entitylist = read(obj.getClass(), Constants.BASEMENT_TEMPLATE_CSV).get();
         }
+        if(getBasementTemplateById(obj.getId())==null){
         entitylist.add(obj);
-        return save(entitylist, Constants.BASEMENT_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
+        status = save(entitylist, Constants.BASEMENT_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
         
 
     }
     @Override
     public Status createBuildingTemplate(BuildingTemplate obj) {
+        Status status = Status.FAULT;
         List<Object> entitylist = new ArrayList<>();
         if(read(obj.getClass(),Constants.BUILDING_TEMPLATE_CSV).isPresent()){
             entitylist = read(obj.getClass(), Constants.BUILDING_TEMPLATE_CSV).get();
         }
+        if(getBuildingTemplateById(obj.getId())==null){
         entitylist.add(obj);
-        return save(entitylist, Constants.BUILDING_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
+        status = save(entitylist, Constants.BUILDING_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
+        }
+        return status;
         
 
     }
@@ -337,7 +366,7 @@ public class DataProviderCsv implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delRoofMaterial(obj.getId())==Status.SUCCESS)
         {
@@ -351,7 +380,7 @@ public class DataProviderCsv implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delMainPartMaterial(obj.getId())==Status.SUCCESS)
         {
@@ -366,7 +395,7 @@ public class DataProviderCsv implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delBasementMaterial(obj.getId())==Status.SUCCESS)
         {
@@ -381,7 +410,7 @@ public class DataProviderCsv implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delRoofTemplate(obj.getId())==Status.SUCCESS)
         {
@@ -396,7 +425,7 @@ public class DataProviderCsv implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if(delMainPartTemplate(obj.getId())==Status.SUCCESS)
         {
@@ -411,7 +440,7 @@ public class DataProviderCsv implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+           return Status.FAULT; 
         }
         if(delBasementTemplate(obj.getId())==Status.SUCCESS)
         {
@@ -425,7 +454,7 @@ public class DataProviderCsv implements IDataProvider{
         
         if (en == null){
             logger.error("Entity is null");
-            
+            return Status.FAULT;
         }
         if( delBuildingTemplate(obj.getId())==Status.SUCCESS)
         {

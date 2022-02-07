@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="35" failures="0" name="com.kaa.simplebuild.DataProviderXMLTest" time="0.609" errors="0" skipped="0">
+<testsuite tests="35" failures="0" name="com.kaa.simplebuild.DataProviderXMLTest" time="1.05" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
@@ -59,39 +59,39 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateMainPartMaterial" time="0.081"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteRoofMaterial" time="0.022"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteMainPartTemplate" time="0.021"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateMainPartTemplate" time="0.043"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdBasementTemplate" time="0.017"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateRoofMaterial" time="0.04"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateBasementMaterial" time="0.014"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteBasementTemplate" time="0.014"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateMainPartMaterial" time="0.089"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteRoofMaterial" time="0.11"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteMainPartTemplate" time="0.027"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateMainPartTemplate" time="0.1"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdBasementTemplate" time="0.025"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateRoofMaterial" time="0.043"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateBasementMaterial" time="0.018"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteBasementTemplate" time="0.026"/>
   <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetMainPartTemplate" time="0"/>
   <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetRoofMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateBasementTemplate" time="0.028"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateBasementTemplate" time="0.04"/>
   <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetBasementTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdBuildingTemplate" time="0.018"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdMainPartMaterial" time="0.013"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteBuildingTemplate" time="0.015"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteMainPartMaterial" time="0.013"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateRoofTemplate" time="0.014"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateBuildingTemplate" time="0.032"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateMainPartMaterial" time="0.027"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdBasementMaterial" time="0.013"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteBasementMaterial" time="0.012"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdBuildingTemplate" time="0.037"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdMainPartMaterial" time="0.043"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteBuildingTemplate" time="0.034"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteMainPartMaterial" time="0.026"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateRoofTemplate" time="0.016"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateBuildingTemplate" time="0.056"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateMainPartMaterial" time="0.039"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdBasementMaterial" time="0.016"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteBasementMaterial" time="0.016"/>
   <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetBuildingTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetMainPartMaterial" time="0.001"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateBasementMaterial" time="0.026"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdRoofTemplate" time="0.012"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateMainPartTemplate" time="0.013"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteRoofTemplate" time="0.014"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetMainPartMaterial" time="0"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateBasementMaterial" time="0.036"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdRoofTemplate" time="0.026"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateMainPartTemplate" time="0.02"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestDeleteRoofTemplate" time="0.032"/>
   <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetBasementMaterial" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateRoofTemplate" time="0.035"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateBasementTemplate" time="0.012"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateRoofMaterial" time="0.014"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestUpdateRoofTemplate" time="0.098"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateBasementTemplate" time="0.013"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateRoofMaterial" time="0.017"/>
   <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetRoofTemplate" time="0"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdMainPartTemplate" time="0.014"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdRoofMaterial" time="0.016"/>
-  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateBuildingTemplate" time="0.015"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdMainPartTemplate" time="0.016"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestGetByIdRoofMaterial" time="0.015"/>
+  <testcase classname="com.kaa.simplebuild.DataProviderXMLTest" name="TestCreateBuildingTemplate" time="0.016"/>
 </testsuite>

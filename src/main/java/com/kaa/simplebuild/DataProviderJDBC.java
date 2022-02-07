@@ -501,6 +501,11 @@ public class DataProviderJDBC implements IDataProvider{
     @Override
     public Status updateRoofMaterial (RoofMaterial obj){
         Status status;
+        if(getRoofMaterialById(obj.getId())==null)
+        {
+            status=Status.FAULT;
+            return status;
+        }
         try {
             
             PreparedStatement ps = connection.prepareStatement(
@@ -525,6 +530,11 @@ public class DataProviderJDBC implements IDataProvider{
     @Override
     public Status updateBasementMaterial (BasementMaterial obj){
          Status status;
+         if(getBasementMaterialById(obj.getId())==null)
+        {
+            status=Status.FAULT;
+            return status;
+        }
         try {
             PreparedStatement ps = connection.prepareStatement(
                         Constants.UPDATE_BASEMENT_MATERIAL);
@@ -549,6 +559,11 @@ public class DataProviderJDBC implements IDataProvider{
     @Override
     public Status updateMainPartMaterial (MainPartMaterial obj){
         Status status;
+        if(getMainPartMaterialById(obj.getId())==null)
+        {
+            status=Status.FAULT;
+            return status;
+        }
         try {
             PreparedStatement ps = connection.prepareStatement(
                         Constants.UPDATE_MAIN_PART_MATERIAL);
@@ -573,6 +588,11 @@ public class DataProviderJDBC implements IDataProvider{
     @Override
     public Status updateMainPartTemplate (MainPartTemplate obj){
         Status status;
+        if(getMainPartTemplateById(obj.getId())==null)
+        {
+            status=Status.FAULT;
+            return status;
+        }
         try {
             PreparedStatement ps = connection.prepareStatement(
                         Constants.UPDATE_MAIN_PART_TEMPLATE);
@@ -598,6 +618,11 @@ public class DataProviderJDBC implements IDataProvider{
     @Override
     public Status updateRoofTemplate (RoofTemplate obj){
         Status status;
+        if(getRoofTemplateById(obj.getId())==null)
+        {
+            status=Status.FAULT;
+            return status;
+        }
         try {
             PreparedStatement ps = connection.prepareStatement(
                         Constants.UPDATE_ROOF_TEMPLATE);
@@ -625,6 +650,11 @@ public class DataProviderJDBC implements IDataProvider{
     @Override
     public Status updateBasementTemplate (BasementTemplate obj){
         Status status;
+        if(getBasementTemplateById(obj.getId())==null)
+        {
+            status=Status.FAULT;
+            return status;
+        }
         try {
             PreparedStatement ps = connection.prepareStatement(
                         Constants.UPDATE_BASEMENT_TEMPLATE);
@@ -649,6 +679,11 @@ public class DataProviderJDBC implements IDataProvider{
     @Override
     public Status updateBuildingTemplate (BuildingTemplate obj){
         Status status;
+        if(getBuildingTemplateById(obj.getId())==null)
+        {
+            status=Status.FAULT;
+            return status;
+        }
         try {
             PreparedStatement ps = connection.prepareStatement(
                         Constants.UPDATE_BUILDING_TEMPLATE);
