@@ -14,6 +14,7 @@ public class Constants {
     public static final String ROOF_TEMPLATE_CSV = "ROOF_TEMPLATE_CSV";
     public static final String BASEMENT_TEMPLATE_CSV = "BASEMENT_TEMPLATE_CSV";
     public static final String BUILDING_TEMPLATE_CSV = "BUILDING_TEMPLATE_CSV";
+    public static final String CALCULATOR_CSV = "CALCULATOR_CSV";
     
     
     

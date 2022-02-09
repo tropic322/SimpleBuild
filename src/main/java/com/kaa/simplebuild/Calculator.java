@@ -6,6 +6,8 @@
 package com.kaa.simplebuild;
 
 import com.kaa.simplebuild.HistoryContent.Status;
+import com.opencsv.bean.CsvBindByName;
+import com.opencsv.bean.CsvBindByPosition;
 import entity.BasementMaterial;
 import entity.BasementTemplate;
 import entity.BuildingTemplate;
@@ -13,17 +15,36 @@ import entity.MainPartMaterial;
 import entity.MainPartTemplate;
 import entity.RoofMaterial;
 import entity.RoofTemplate;
+import org.simpleframework.xml.Element;
+import utils.CalculatorUtil;
 //import history.NewMain.dataProvider;
 /**
  *
  * @author Alexandr
  */
 public class Calculator {
-    private long idCalculatedBuilding;
+    @CsvBindByName
+    @CsvBindByPosition(position = 0)
+    @Element(name = "BUILDING_ID")
+    private long idCalculatedBuilding=0;
+    @CsvBindByName
+    @CsvBindByPosition(position = 1)
+    @Element(name = "HOME_AREA")
     private double homeArea =0;
+    @CsvBindByName
+    @CsvBindByPosition(position = 2)
+    @Element(name = "HOME_TENANTS")
     private int homeTenants=0;
+    @CsvBindByName
+    @CsvBindByPosition(position = 3)
+    @Element(name = "SUM")
     private double sumOtherExpenses=0;
+    @CsvBindByName
+    @CsvBindByPosition(position = 4)
+    @Element(name = "LAND_AREA")
     private double landArea=0;
+
+    
 
     public void setLandArea(double landArea) {
         this.landArea = landArea;
@@ -32,10 +53,30 @@ public class Calculator {
     public double getLandArea() {
         return landArea;
     }
-
+    public Calculator() 
+    {
+        
+    }
+    public Calculator(long id,double homeArea,int homeTenants,double sumOtherExpenses,double landArea)
+    {    
+        this.idCalculatedBuilding = id;
+        this.homeArea = homeArea;
+        this.homeTenants = homeTenants;
+        this.landArea = landArea;
+        this.sumOtherExpenses=sumOtherExpenses;
+        
+    }
     
     
-    public Calculator() {
+    
+    public Calculator(Calculator obj)
+    {    
+        this.idCalculatedBuilding = obj.getIdCalculatedBuilding();
+        this.homeArea = obj.getHomeArea();
+        this.homeTenants = obj.getHomeTenants();
+        this.landArea = obj.getLandArea();
+        this.sumOtherExpenses=obj.getSumOtherExpenses();
+        
     }
     
     public void setSumOtherExpenses(double sumOtherExpenses) {
@@ -198,5 +239,9 @@ public class Calculator {
         sumOtherExpenses = CalculateAmenitiesСost()+CalculateTax();
         
         return sumOtherExpenses;
+    }
+    @Override
+    public String toString() {
+        return "Calculator{" + "idCalculatedBuilding=" + idCalculatedBuilding + ", homeArea=" + homeArea + ", homeTenants=" + homeTenants + ", sumOtherExpenses=" + sumOtherExpenses + ", landArea=" + landArea + '}';
     }
 }

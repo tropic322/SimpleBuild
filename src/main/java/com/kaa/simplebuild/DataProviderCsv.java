@@ -42,6 +42,8 @@ public class DataProviderCsv implements IDataProvider{
             entitylist = read(obj.getClass(), Constants.ROOF_MATERIAL_CSV).get();
         }
         if(getRoofMaterialById(obj.getId())==null){
+            logger.info("Entity with the same id was not found.\n" +
+                    "Entity creation operation in progress");
         entitylist.add(obj);
         status = save(entitylist, Constants.ROOF_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
         
@@ -58,6 +60,8 @@ public class DataProviderCsv implements IDataProvider{
             entitylist = read(obj.getClass(), Constants.MAIN_PART_MATERIAL_CSV).get();
         }
         if(getMainPartMaterialById(obj.getId())==null){
+            logger.info("Entity with the same id was not found.\n" +
+                    "Entity creation operation in progress");
         entitylist.add(obj);
         status = save(entitylist, Constants.MAIN_PART_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
         }
@@ -73,6 +77,8 @@ public class DataProviderCsv implements IDataProvider{
             entitylist = read(obj.getClass(), Constants.BASEMENT_MATERIAL_CSV).get();
         }
         if(getBasementMaterialById(obj.getId())==null){
+            logger.info("Entity with the same id was not found.\n" +
+                    "Entity creation operation in progress");
         entitylist.add(obj);
         status = save(entitylist, Constants.BASEMENT_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
         }
@@ -88,6 +94,8 @@ public class DataProviderCsv implements IDataProvider{
             entitylist = read(obj.getClass(), Constants.ROOF_TEMPLATE_CSV).get();
         }
         if(getRoofTemplateById(obj.getId())==null){
+            logger.info("Entity with the same id was not found.\n" +
+                    "Entity creation operation in progress");
         entitylist.add(obj);
         status = save(entitylist, Constants.ROOF_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
         }
@@ -103,6 +111,8 @@ public class DataProviderCsv implements IDataProvider{
             entitylist = read(obj.getClass(), Constants.MAIN_PART_TEMPLATE_CSV).get();
         }
         if(getMainPartTemplateById(obj.getId())==null){
+            logger.info("Entity with the same id was not found.\n" +
+                    "Entity creation operation in progress");
         entitylist.add(obj);
         status = save(entitylist, Constants.MAIN_PART_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
         }
@@ -118,6 +128,8 @@ public class DataProviderCsv implements IDataProvider{
             entitylist = read(obj.getClass(), Constants.BASEMENT_TEMPLATE_CSV).get();
         }
         if(getBasementTemplateById(obj.getId())==null){
+            logger.info("Entity with the same id was not found.\n" +
+                    "Entity creation operation in progress");
         entitylist.add(obj);
         status = save(entitylist, Constants.BASEMENT_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
         }
@@ -133,6 +145,8 @@ public class DataProviderCsv implements IDataProvider{
             entitylist = read(obj.getClass(), Constants.BUILDING_TEMPLATE_CSV).get();
         }
         if(getBuildingTemplateById(obj.getId())==null){
+            logger.info("Entity with the same id was not found.\n" +
+                    "Entity creation operation in progress");
         entitylist.add(obj);
         status = save(entitylist, Constants.BUILDING_TEMPLATE_CSV,currentThread().getStackTrace()[1].getMethodName());
         }
@@ -150,10 +164,10 @@ public class DataProviderCsv implements IDataProvider{
             entity = entities.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList());
             
             if (entity.isEmpty()){                
-                throw new NullObjectException("entity is null");
+                throw new NullObjectException(" RoofMaterial entity is null");
             }
         } catch (NullObjectException e){
-            logger.error(e);
+            logger.info(e);
             return null;
         }
 
@@ -168,10 +182,10 @@ public class DataProviderCsv implements IDataProvider{
             entity = entities.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList());
             
             if (entity.isEmpty()){                
-                throw new NullObjectException("entity is null");
+                throw new NullObjectException(" MainPartMaterial entity is null");
             }
         } catch (NullObjectException e){
-            logger.error(e);
+            logger.info(e);
             return null;
         }
 
@@ -186,10 +200,10 @@ public class DataProviderCsv implements IDataProvider{
             entity = entities.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList());
             
             if (entity.isEmpty()){                
-                throw new NullObjectException("entity is null");
+                throw new NullObjectException("BasementMaterial entity is null");
             }
         } catch (NullObjectException e){
-            logger.error(e);
+            logger.info(e);
             return null;
         }
 
@@ -204,10 +218,10 @@ public class DataProviderCsv implements IDataProvider{
             entity = entities.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList());
             
             if (entity.isEmpty()){                
-                throw new NullObjectException("entity is null");
+                throw new NullObjectException("RoofTemplate entity is null");
             }
         } catch (NullObjectException e){
-            logger.error(e);
+            logger.info(e);
             return null;
         }
 
@@ -222,10 +236,10 @@ public class DataProviderCsv implements IDataProvider{
             entity = entities.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList());
             
             if (entity.isEmpty()){                
-                throw new NullObjectException("entity is null");
+                throw new NullObjectException("MainPartTemplate entity is null");
             }
         } catch (NullObjectException e){
-            logger.error(e);
+            logger.info(e);
             return null;
         }
 
@@ -240,10 +254,10 @@ public class DataProviderCsv implements IDataProvider{
             entity = entities.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList());
             
             if (entity.isEmpty()){                
-                throw new NullObjectException("entity is null");
+                throw new NullObjectException("BasementTemplate entity is null");
             }
         } catch (NullObjectException e){
-            logger.error(e);
+            logger.info(e);
             return null;
         }
 
@@ -258,10 +272,10 @@ public class DataProviderCsv implements IDataProvider{
             entity = entities.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList());
             
             if (entity.isEmpty()){                
-                throw new NullObjectException("entity is null");
+                throw new NullObjectException("BuildingTemplate entity is null");
             }
         } catch (NullObjectException e){
-            logger.error(e);
+            logger.info(e);
             return null;
         }
 
