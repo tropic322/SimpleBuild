@@ -44,7 +44,7 @@ public class Calculator {
     @Element(name = "LAND_AREA")
     private double landArea=0;
 
-    
+
 
     public void setLandArea(double landArea) {
         this.landArea = landArea;
@@ -53,32 +53,32 @@ public class Calculator {
     public double getLandArea() {
         return landArea;
     }
-    public Calculator() 
+    public Calculator()
     {
-        
+
     }
     public Calculator(long id,double homeArea,int homeTenants,double sumOtherExpenses,double landArea)
-    {    
+    {
         this.idCalculatedBuilding = id;
         this.homeArea = homeArea;
         this.homeTenants = homeTenants;
         this.landArea = landArea;
         this.sumOtherExpenses=sumOtherExpenses;
-        
+
     }
-    
-    
-    
+
+
+
     public Calculator(Calculator obj)
-    {    
+    {
         this.idCalculatedBuilding = obj.getIdCalculatedBuilding();
         this.homeArea = obj.getHomeArea();
         this.homeTenants = obj.getHomeTenants();
         this.landArea = obj.getLandArea();
         this.sumOtherExpenses=obj.getSumOtherExpenses();
-        
+
     }
-    
+
     public void setSumOtherExpenses(double sumOtherExpenses) {
         this.sumOtherExpenses = sumOtherExpenses;
     }
@@ -93,13 +93,13 @@ public class Calculator {
     public int getHomeTenants() {
         return homeTenants;
     }
-    
+
     public double getHomeArea() {
-    return homeArea;
+        return homeArea;
     }
 
     public void setHomeArea(double houseArea) {
-    this.homeArea = houseArea;
+        this.homeArea = houseArea;
     }
     public void setIdCalculatedBuilding(long idCalculatedBuilding) {
         this.idCalculatedBuilding = idCalculatedBuilding;
@@ -108,11 +108,28 @@ public class Calculator {
     public long getIdCalculatedBuilding() {
         return idCalculatedBuilding;
     }
-    
-    public Status InputHomeArea(String area){
+    public Status InputBuildingTemplate(String template) {
         try {
-            setHomeArea(Double.parseDouble(area));            
-            
+            if(Long.parseLong(template)>0) {
+                setIdCalculatedBuilding(Long.parseLong(template));
+            }else{
+                return Status.FAULT;
+            }
+
+        } catch (NumberFormatException e) {
+            return Status.FAULT;
+        }
+        return Status.SUCCESS;
+    }
+
+        public Status InputHomeArea(String area){
+        try {
+            if(Long.parseLong(area)>0) {
+            setHomeArea(Double.parseDouble(area));
+            }else{
+                return Status.FAULT;
+            }
+
         } catch (NumberFormatException e) {
             return Status.FAULT;
         }
@@ -120,8 +137,12 @@ public class Calculator {
     }
     public Status InputLandArea(String area){
         try {
-            setLandArea(Double.parseDouble(area));            
-            
+            if(Long.parseLong(area)>0) {
+            setLandArea(Double.parseDouble(area));
+            }else{
+                return Status.FAULT;
+            }
+
         } catch (NumberFormatException e) {
             return Status.FAULT;
         }
@@ -129,8 +150,12 @@ public class Calculator {
     }
     public Status InputHomeTenants(String t){
         try {
-            setHomeTenants(Integer.parseInt(t));            
-            
+            if(Long.parseLong(t)>0) {
+            setHomeTenants(Integer.parseInt(t));
+            }else{
+                return Status.FAULT;
+            }
+
         } catch (NumberFormatException e) {
             return Status.FAULT;
         }
@@ -139,7 +164,7 @@ public class Calculator {
     //InputBuildingTemplate
     public double CalculateHomeCost(String dataProviderType)
     {
-        
+
         IDataProvider dataProvider=null;
         switch (dataProviderType){
             case "csv":
@@ -154,90 +179,89 @@ public class Calculator {
         }
         //dataProvider;
         BuildingTemplate bt = dataProvider.getBuildingTemplateById(idCalculatedBuilding);
-        //проверка на null и логирование 
-        
+        //проверка на null и логирование
+
         RoofTemplate roofTemplate =dataProvider.getRoofTemplateById(bt.getIdRoofTemplate());
         RoofMaterial roofMaterial = dataProvider.getRoofMaterialById(roofTemplate.getIdMaterial());
         double roofPrice = (homeArea*roofMaterial.getPrice()*roofTemplate.getPriceMultiplier());
-        
+
         MainPartTemplate mainPartTemplate =dataProvider.getMainPartTemplateById(bt.getIdMainPartTemplate());
         MainPartMaterial mainPartMaterial = dataProvider.getMainPartMaterialById(mainPartTemplate.getIdMaterial());
         double mainPartPrice = (homeArea*mainPartMaterial.getPrice()*mainPartTemplate.getPriceMultiplier());
-        
+
         BasementTemplate basementTemplate =dataProvider.getBasementTemplateById(bt.getIdBasementTemplate());
         BasementMaterial basementMaterial = dataProvider.getBasementMaterialById(basementTemplate.getIdMaterial());
         double basementPrice = (homeArea*basementMaterial.getPrice()*basementTemplate.getPriceMultiplier());
-        
+
         return roofPrice+mainPartPrice+basementPrice;
     }
     public double CalculateHomeCost(IDataProvider dp)
-    {   
-        
+    {
+
         BuildingTemplate bt = dp.getBuildingTemplateById(idCalculatedBuilding);
-        
+
         RoofTemplate roofTemplate =dp.getRoofTemplateById(bt.getIdRoofTemplate());
         RoofMaterial roofMaterial = dp.getRoofMaterialById(roofTemplate.getIdMaterial());
         double roofPrice = (homeArea*roofMaterial.getPrice()*roofTemplate.getPriceMultiplier());
-        
+
         MainPartTemplate mainPartTemplate =dp.getMainPartTemplateById(bt.getIdMainPartTemplate());
         MainPartMaterial mainPartMaterial = dp.getMainPartMaterialById(mainPartTemplate.getIdMaterial());
         double mainPartPrice = (homeArea*mainPartMaterial.getPrice()*mainPartTemplate.getPriceMultiplier());
-        
+
         BasementTemplate basementTemplate =dp.getBasementTemplateById(bt.getIdBasementTemplate());
         BasementMaterial basementMaterial = dp.getBasementMaterialById(basementTemplate.getIdMaterial());
         double basementPrice = (homeArea*basementMaterial.getPrice()*basementTemplate.getPriceMultiplier());
-        
+
         return roofPrice+mainPartPrice+basementPrice;
     }
-    public double CalculateHomeTax() 
-    {   
-        
+    public double CalculateHomeTax()
+    {
+
         int tax = 10;
         System.out.println("Home tax = " + homeArea*tax);
         return homeArea*tax;
     }
-    
-    public double CalculateLandTax() 
+
+    public double CalculateLandTax()
     {
-        
+
         double tax = 1.5;
         System.out.println("Land tax = " + landArea*tax);
         return landArea*tax;
     }
-    public double CalculateTax() 
-    {        
+    public double CalculateTax()
+    {
         double sumTax = CalculateHomeTax();
         if(getLandArea()!=0 )
             sumTax =sumTax+ CalculateLandTax();
         System.out.println("Sum of tax = " + sumTax);
         return sumTax;
     }
-    public int CalculateConnectionCost() 
+    public int CalculateConnectionCost()
     {
         int costGasConnection = 1500;
         int costWaterSupplyConnection = 3000;
         int costElectricityGidConnection = 1800;
-        System.out.println("Connection cost = " + costGasConnection+costWaterSupplyConnection+costElectricityGidConnection);
+        System.out.println("Connection cost = " + (costGasConnection+costWaterSupplyConnection+costElectricityGidConnection));
         return costGasConnection+costWaterSupplyConnection+costElectricityGidConnection;
     }
 
     public double CalculateCostOfUsing() {
         double costForOneResidenr = 10787.3;
-        System.out.println("Connection cost = " + getHomeTenants()*costForOneResidenr);
+        System.out.println("Cost of using = " + getHomeTenants()*costForOneResidenr);
         return getHomeTenants()*costForOneResidenr;
     }
     public double CalculateAmenitiesСost(){
         double sum = CalculateConnectionCost();
-        if(getHomeTenants()!=0)        
+        if(getHomeTenants()!=0)
             sum = sum+ CalculateCostOfUsing();
-        
         System.out.println("Amenities cost = " + sum);
         return sum;
     }
     public double CalculateOtherExpenses(){
         sumOtherExpenses =0;
         sumOtherExpenses = CalculateAmenitiesСost()+CalculateTax();
-        
+
         return sumOtherExpenses;
     }
     @Override

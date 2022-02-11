@@ -67,7 +67,7 @@ public class NewMain {
 
         if (args.length == 0){
             System.out.println("No date provider selected");
-            logger.error("No date provider selected");
+            //logger.error("No date provider selected");
             return;
         }
         switch (args[0]){
@@ -88,7 +88,7 @@ public class NewMain {
         }
         if (args.length == 1){
             System.out.println("Executable method name not entered \n Please enter method name");
-            logger.error(" Method not selected \n ");
+            //logger.error(" Method not selected \n ");
             return;
         }
 
@@ -97,19 +97,17 @@ public class NewMain {
                 if (args.length != 4){
                     System.out.println("Invalid number of parameters \n Please enter only 3 parameters \n (dataprovider, method name, building template id, home area )");
                     logger.info(dataProvider.getBuildingTemplate());
-                    logger.error("Invalid number of parameters");
+                    //logger.error("Invalid number of parameters");
                     return;
                 }
                 try{
 
-                    long id = Long.parseLong(args[2], 10);
-
-                    if(dataProvider.getBuildingTemplateById(id)!=null){
-                        calculator.setIdCalculatedBuilding(id);
+                    if(dataProvider.getBuildingTemplateById(Long.parseLong(args[2]))!=null){
+                        calculator.InputBuildingTemplate(args[2]);
                     }else{
                         System.out.println("Invalid building template id \n Such building template does not exist )");
-                        logger.error("Invalid building template id ");
-                        //logger.info(dataProvider.getBuildingTemplate());
+                       //logger.error("Invalid building template id ");
+
 
                         return;
                     }
@@ -122,7 +120,7 @@ public class NewMain {
 
                 if(calculator.InputHomeArea(args[3])==Status.FAULT){
                     System.out.println("Invalid home area value \n This value cannot be converted to a number )");
-                    logger.error("Invalid home area value");
+                    //logger.error("Invalid home area value");
                     return;
                 }
                 calculatorUtil.createCalculator(calculator);
@@ -131,23 +129,23 @@ public class NewMain {
             case "CalculateHomeCost":
                 if (args.length != 2){
                     System.out.println("Invalid number of parameters \n Please enter only 2 parameters \n (dataprovider, method name )");
-                    logger.error("Invalid number of parameters");
+                    //logger.error("Invalid number of parameters");
                     return;
                 }
                 calculator = calculatorUtil.getCalculator();
                 if(calculator.getIdCalculatedBuilding()!=0 || calculator.getHomeArea()!=0){
                     double homeCost = calculator.CalculateHomeCost(dataProvider);
                     System.out.println("Home cost = " + homeCost);
-                    logger.info("Method calculate HomeCost completed");
+                    //logger.info("Method calculate HomeCost completed");
                     return;
                 }
                 if(calculator.getIdCalculatedBuilding()==0){
                     System.out.println("House template not initialized");
-                    logger.error("House template not initialized");
+                    //logger.error("House template not initialized");
                 }
                 if(calculator.getHomeArea()==0){
                     System.out.println("Area of the house is not entered");
-                    logger.error("Area of the house is not entered");
+                    //logger.error("Area of the house is not entered");
 
                 }
                 break;
@@ -155,7 +153,7 @@ public class NewMain {
                 calculator = calculatorUtil.getCalculator();
                 if (args.length != 4){
                     System.out.println("Invalid number of parameters \n Please enter only 4 parameters \n (dataprovider, method name, template parameter(-r, -m , -b ), id material");
-                    logger.error("Invalid number of parameters");
+                    //logger.error("Invalid number of parameters");
                     return;
                 }
                 if(calculator.getIdCalculatedBuilding()!=0){
@@ -180,7 +178,7 @@ public class NewMain {
 
                             }else{
                                 System.out.println("Invalid id of material \n Such material does not exist");
-                                logger.error("Invalid id of material");
+                                //logger.error("Invalid id of material");
                                 return;
                             }
 
@@ -194,7 +192,7 @@ public class NewMain {
                             calculator.setIdCalculatedBuilding(template.getId());
                             calculatorUtil.createCalculator(calculator);
                             System.out.println("Roof material has been changed");
-                            logger.info("Roof material has been changed");
+                            //logger.info("Roof material has been changed");
                             break;
                         case "-m":
                             MainPartTemplate mt = dataProvider.getMainPartTemplateById(template.getIdMainPartTemplate());
@@ -205,7 +203,7 @@ public class NewMain {
                             }
                             else{
                                 System.out.println("Invalid id of material \n Such material does not exist");
-                                logger.error("Invalid id of material");
+                                //logger.error("Invalid id of material");
                                 return;
                             }
                             mt.setId(System.currentTimeMillis());
@@ -216,7 +214,7 @@ public class NewMain {
                             calculator.setIdCalculatedBuilding(template.getId());
                             calculatorUtil.createCalculator(calculator);
                             System.out.println("Main part material has been changed");
-                            logger.info("Main part material has been changed");
+                            //logger.info("Main part material has been changed");
                             break;
                         case "-b":
                             BasementTemplate bt = dataProvider.getBasementTemplateById(template.getIdBasementTemplate());
@@ -238,7 +236,7 @@ public class NewMain {
                             calculator.setIdCalculatedBuilding(template.getId());
                             calculatorUtil.createCalculator(calculator);
                             System.out.println("Basement material has been changed");
-                            logger.info("Basement material has been changed");
+                            //logger.info("Basement material has been changed");
                             break;
                         default:
                             logger.error("Error in choosing a template parameter(-r, -m , -b )");
@@ -246,7 +244,7 @@ public class NewMain {
                     }
                 }else{
                     System.out.println("House template not initialized");
-                    logger.error("House template not initialized");
+                   // logger.error("House template not initialized");
                     return;
                 }
 
@@ -254,13 +252,13 @@ public class NewMain {
             case "InputHomeTenants":
                 if (args.length != 3){
                     System.out.println("Invalid number of parameters \n Please enter only 3 parameters \n (dataprovider, method name, number of home tenants");
-                    logger.error("Invalid number of parameters");
+                    //logger.error("Invalid number of parameters");
                     return;
                 }
                 calculator = calculatorUtil.getCalculator();
                 if(calculator.InputHomeTenants(args[2])==Status.FAULT){
                     System.out.println("Invalid home tenants value \n This value cannot be converted to a number )");
-                    logger.error("Invalid home tenants value");
+                    //logger.error("Invalid home tenants value");
                     return;
                 }
                 calculatorUtil.createCalculator(calculator);
@@ -269,13 +267,13 @@ public class NewMain {
             case "InputLandArea":
                 if (args.length != 3){
                     System.out.println("Invalid number of parameters \n Please enter only 3 parameters \n (dataprovider, method name, land size");
-                    logger.error("Invalid number of parameters");
+                    //logger.error("Invalid number of parameters");
                     return;
                 }
                 calculator = calculatorUtil.getCalculator();
                 if(calculator.InputLandArea(args[2])==Status.FAULT){
                     System.out.println("Invalid land size value \n This value cannot be converted to a number )");
-                    logger.error("Invalid home tenants value");
+                    //logger.error("Invalid home tenants value");
                     return;
                 }
                 calculatorUtil.createCalculator(calculator);
@@ -289,9 +287,34 @@ public class NewMain {
                     return;
                 }
                 calculator = calculatorUtil.getCalculator();
-                System.out.println("Amenities cost = " + calculator.CalculateOtherExpenses());
-                logger.info("Amenities cost was calculated");
+                System.out.println("Calculate other expenses cost = " + calculator.CalculateOtherExpenses());
+                //logger.info("Calculate other expenses cost was calculated");
                 break;
+            case "CalculateTax":
+                if (args.length != 2)
+                {
+                    System.out.println("Invalid number of parameters \n Please enter only 2 parameters \n (dataprovider, method name");
+                    logger.error("Invalid number of parameters");
+                    return;
+                }
+                calculator = calculatorUtil.getCalculator();
+                calculator.CalculateTax();
+                //logger.info("Calculate tax calculated");
+                break;
+            case "CalculateAmenitiesCost":
+                if (args.length != 2)
+                {
+                    System.out.println("Invalid number of parameters \n Please enter only 2 parameters \n (dataprovider, method name");
+                    logger.error("Invalid number of parameters");
+                    return;
+                }
+                calculator = calculatorUtil.getCalculator();
+                calculator.CalculateAmenitiesСost();
+                //logger.info("Calculate amenities cost calculated");
+                break;
+            default:
+                logger.error("Error in choosing a method");
+                return;
         }
 
 

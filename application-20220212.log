@@ -1,0 +1,308 @@
+2022-02-12 00:33:23.545 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:23.569 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:23.619 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  MainPartMaterial entity is null
+2022-02-12 00:33:23.620 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.068 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - create  MainPartMaterial{id=1644615203544, name='test', price=1.0, soundTransmission=1.0}
+2022-02-12 00:33:24.212 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:24.245 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:24.258 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  RoofMaterial entity is null
+2022-02-12 00:33:24.259 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.343 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  RoofMaterial entity is null
+2022-02-12 00:33:24.343 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - delnull
+2022-02-12 00:33:24.358 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  RoofMaterial entity is null
+2022-02-12 00:33:24.358 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:24.364 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:24.386 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: MainPartTemplate entity is null
+2022-02-12 00:33:24.387 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.447 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: MainPartTemplate entity is null
+2022-02-12 00:33:24.447 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - del null
+2022-02-12 00:33:24.459 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: MainPartTemplate entity is null
+2022-02-12 00:33:24.460 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:24.466 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:24.477 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: MainPartTemplate entity is null
+2022-02-12 00:33:24.478 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.515 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:24.519 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:24.526 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: MainPartTemplate entity is null
+2022-02-12 00:33:24.526 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.546 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - update  MainPartTemplate{id=1644615204459, name='test2' , priceMultiplier=2.2, idMaterial=2}
+2022-02-12 00:33:24.605 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:24.626 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:24.674 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementTemplate entity is null
+2022-02-12 00:33:24.675 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.711 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:24.715 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:24.724 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  RoofMaterial entity is null
+2022-02-12 00:33:24.724 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.769 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:24.815 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:24.826 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  RoofMaterial entity is null
+2022-02-12 00:33:24.826 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.854 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - update  RoofMaterial{id=1644615204711, name='test2', price=2.0, durabilityYears=2}
+2022-02-12 00:33:24.892 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:24.895 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:24.904 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementMaterial entity is null
+2022-02-12 00:33:24.905 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:24.923 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - create  BasementMaterial{id=1644615204892, name='test', price=1.0, frostResistance=1, waterproof=1}
+2022-02-12 00:33:24.959 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:24.981 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:25.001 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementTemplate entity is null
+2022-02-12 00:33:25.001 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.064 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementTemplate entity is null
+2022-02-12 00:33:25.065 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - delnull
+2022-02-12 00:33:25.073 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementTemplate entity is null
+2022-02-12 00:33:25.074 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:25.078 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:25.093 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementTemplate entity is null
+2022-02-12 00:33:25.093 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.122 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:25.127 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:25.149 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementTemplate entity is null
+2022-02-12 00:33:25.150 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.170 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - update  BasementTemplate{id=1644615205074, name='test2' , priceMultiplier=2.2, idMaterial=2, cellar=false}
+2022-02-12 00:33:25.191 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:25.194 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:25.202 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BuildingTemplate entity is null
+2022-02-12 00:33:25.203 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.231 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:25.236 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:25.243 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  MainPartMaterial entity is null
+2022-02-12 00:33:25.243 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.271 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:25.274 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:25.283 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BuildingTemplate entity is null
+2022-02-12 00:33:25.283 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.309 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BuildingTemplate entity is null
+2022-02-12 00:33:25.309 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - delnull
+2022-02-12 00:33:25.311 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BuildingTemplate entity is null
+2022-02-12 00:33:25.312 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:25.314 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:25.320 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  MainPartMaterial entity is null
+2022-02-12 00:33:25.320 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.343 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  MainPartMaterial entity is null
+2022-02-12 00:33:25.343 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - delnull
+2022-02-12 00:33:25.345 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  MainPartMaterial entity is null
+2022-02-12 00:33:25.346 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.349 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.357 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: RoofTemplate entity is null
+2022-02-12 00:33:25.357 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.370 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - create  RoofTemplate{id=1644615205346, name='test' , priceMultiplier=1.0, idMaterial=1, insulation=true, pipe=true}
+2022-02-12 00:33:25.383 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:25.386 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:25.392 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BuildingTemplate entity is null
+2022-02-12 00:33:25.393 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.425 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:25.428 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:25.440 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BuildingTemplate entity is null
+2022-02-12 00:33:25.440 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.468 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - update  BuildingTemplate{id=1644615205383, name='test2' , idRoofTenplate=2, idMainPartTemplate=1, idBasementTemplate=1}
+2022-02-12 00:33:25.485 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:25.487 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:25.496 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  MainPartMaterial entity is null
+2022-02-12 00:33:25.496 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.518 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:25.522 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartMaterial.csv
+2022-02-12 00:33:25.526 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  MainPartMaterial entity is null
+2022-02-12 00:33:25.526 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.537 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - update  MainPartMaterial{id=1644615205484, name='test2', price=2.0, soundTransmission=2.0}
+2022-02-12 00:33:25.548 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:25.552 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:25.559 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementMaterial entity is null
+2022-02-12 00:33:25.560 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.586 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:25.589 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:25.622 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementMaterial entity is null
+2022-02-12 00:33:25.623 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.656 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementMaterial entity is null
+2022-02-12 00:33:25.657 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - delnull
+2022-02-12 00:33:25.663 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementMaterial entity is null
+2022-02-12 00:33:25.668 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:25.673 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:25.699 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementMaterial entity is null
+2022-02-12 00:33:25.700 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.733 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:25.742 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementMaterial.csv
+2022-02-12 00:33:25.754 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementMaterial entity is null
+2022-02-12 00:33:25.754 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.773 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - update  BasementMaterial{id=1644615205668, name='test2', price=2.0, frostResistance=2, waterproof=2}
+2022-02-12 00:33:25.797 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.805 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.816 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: RoofTemplate entity is null
+2022-02-12 00:33:25.816 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.861 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:25.864 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:25.870 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: MainPartTemplate entity is null
+2022-02-12 00:33:25.870 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.883 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - create  MainPartTemplate{id=1644615205861, name='test' , priceMultiplier=1.0, idMaterial=1}
+2022-02-12 00:33:25.900 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.905 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.913 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: RoofTemplate entity is null
+2022-02-12 00:33:25.913 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.939 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: RoofTemplate entity is null
+2022-02-12 00:33:25.940 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - delnull
+2022-02-12 00:33:25.943 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: RoofTemplate entity is null
+2022-02-12 00:33:25.944 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.950 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.957 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: RoofTemplate entity is null
+2022-02-12 00:33:25.958 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:25.989 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.992 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofTemplate.csv
+2022-02-12 00:33:25.998 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: RoofTemplate entity is null
+2022-02-12 00:33:25.998 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:26.011 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - update  RoofTemplate{id=1644615205944, name='test2' , priceMultiplier=1.0, idMaterial=1, insulation=true, pipe=true}
+2022-02-12 00:33:26.028 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:26.031 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BasementTemplate.csv
+2022-02-12 00:33:26.040 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BasementTemplate entity is null
+2022-02-12 00:33:26.040 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:26.053 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - create  BasementTemplate{id=1644615206028, name='test' , priceMultiplier=1.0, idMaterial=1, cellar=false}
+2022-02-12 00:33:26.069 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:26.078 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:26.084 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  RoofMaterial entity is null
+2022-02-12 00:33:26.084 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:26.095 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - create  RoofMaterial{id=1644615206069, name='test', price=1.0, durabilityYears=1}
+2022-02-12 00:33:26.108 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:26.112 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/MainPartTemplate.csv
+2022-02-12 00:33:26.118 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: MainPartTemplate entity is null
+2022-02-12 00:33:26.118 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:26.168 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:26.172 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/RoofMaterial.csv
+2022-02-12 00:33:26.185 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException:  RoofMaterial entity is null
+2022-02-12 00:33:26.185 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:26.214 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:26.216 [main] INFO  com.kaa.simplebuild.DataProviderCsv - src/main/resources/csv/BuildingTemplate.csv
+2022-02-12 00:33:26.223 [main] INFO  com.kaa.simplebuild.DataProviderCsv - utils.NullObjectException: BuildingTemplate entity is null
+2022-02-12 00:33:26.223 [main] INFO  com.kaa.simplebuild.DataProviderCsv - Entity with the same id was not found.
+Entity creation operation in progress
+2022-02-12 00:33:26.233 [main] INFO  com.kaa.simplebuild.DataProviderCSVTest - create  BuildingTemplate{id=1644615206214, name='test' , idRoofTenplate=2, idMainPartTemplate=1, idBasementTemplate=1}
+2022-02-12 00:33:26.300 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  MainPartMaterial{id=1644615206277, name='test', price=1.0, soundTransmission=1.0}
+2022-02-12 00:33:26.304 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep3:  DELETE FROM MAINPARTMATERIAL WHERE id= (?) {1: 1644615206277}
+2022-02-12 00:33:26.305 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - conn0: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-02-12 00:33:26.315 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep4: INSERT INTO ROOFMATERIAL VALUES (?,?,?,?) {1: 1644615206314, 2: 'test', 3: 1.0, 4: 1}
+2022-02-12 00:33:26.315 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn1: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-02-12 00:33:26.324 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615206314, name='test', price=1.0, durabilityYears=1}]
+2022-02-12 00:33:26.334 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2022-02-12 00:33:26.334 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.334 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-02-12 00:33:26.335 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - []
+2022-02-12 00:33:26.335 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.356 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.356 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-02-12 00:33:26.357 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.377 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  MainPartTemplate{id=1644615206359, name='test2' , priceMultiplier=2.2, idMaterial=2}
+2022-02-12 00:33:26.412 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep25: INSERT INTO ROOFMATERIAL VALUES (?,?,?,?) {1: 1644615206412, 2: 'test', 3: 1.0, 4: 1}
+2022-02-12 00:33:26.413 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn5: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-02-12 00:33:26.419 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615206412, name='test', price=1.0, durabilityYears=1}]
+2022-02-12 00:33:26.427 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615206412, name='test2', price=2.0, durabilityYears=2}]
+2022-02-12 00:33:26.427 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  RoofMaterial{id=1644615206412, name='test2', price=2.0, durabilityYears=2}
+2022-02-12 00:33:26.428 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615206412, name='test2', price=2.0, durabilityYears=2}]
+2022-02-12 00:33:26.429 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615206412, name='test2', price=2.0, durabilityYears=2}]
+2022-02-12 00:33:26.451 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  BasementMaterial{id=1644615206438, name='test', price=1.0, frostResistance=1, waterproof=1}
+2022-02-12 00:33:26.492 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.492 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-02-12 00:33:26.493 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.608 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  BasementTemplate{id=1644615206585, name='test2' , priceMultiplier=2.2, idMaterial=2, cellar=false}
+2022-02-12 00:33:26.694 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.695 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep51:  DELETE FROM BUILDINGTEMPLATE WHERE id= (?) {1: 1644615206635}
+2022-02-12 00:33:26.774 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep55:  DELETE FROM MAINPARTMATERIAL WHERE id= (?) {1: 1644615206764}
+2022-02-12 00:33:26.774 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - conn13: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-02-12 00:33:26.791 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.792 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep58:  DELETE FROM BUILDINGTEMPLATE WHERE id= (?) {1: 1644615206782}
+2022-02-12 00:33:26.798 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.799 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-02-12 00:33:26.800 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.810 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep63:  DELETE FROM MAINPARTMATERIAL WHERE id= (?) {1: 1644615206802}
+2022-02-12 00:33:26.810 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - conn15: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-02-12 00:33:26.820 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.821 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-02-12 00:33:26.825 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.835 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  RoofTemplate{id=1644615206827, name='test' , priceMultiplier=1.0, idMaterial=1, insulation=true, pipe=true}
+2022-02-12 00:33:26.857 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  BuildingTemplate{id=1644615206844, name='test2' , idRoofTenplate=2, idMainPartTemplate=1, idBasementTemplate=1}
+2022-02-12 00:33:26.858 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.858 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep76:  DELETE FROM BUILDINGTEMPLATE WHERE id= (?) {1: 1644615206844}
+2022-02-12 00:33:26.878 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  MainPartMaterial{id=1644615206864, name='test2', price=2.0, soundTransmission=2.0}
+2022-02-12 00:33:26.880 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep83:  DELETE FROM MAINPARTMATERIAL WHERE id= (?) {1: 1644615206864}
+2022-02-12 00:33:26.880 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - conn18: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-02-12 00:33:26.930 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.931 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-02-12 00:33:26.931 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.948 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  BasementMaterial{id=1644615206936, name='test2', price=2.0, frostResistance=2, waterproof=2}
+2022-02-12 00:33:26.975 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  MainPartTemplate{id=1644615206968, name='test' , priceMultiplier=1.0, idMaterial=1}
+2022-02-12 00:33:26.997 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:26.997 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - delnull
+2022-02-12 00:33:26.997 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:27.026 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - update  RoofTemplate{id=1644615207001, name='test2' , priceMultiplier=1.0, idMaterial=1, insulation=true, pipe=true}
+2022-02-12 00:33:27.042 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  BasementTemplate{id=1644615207035, name='test' , priceMultiplier=1.0, idMaterial=1, cellar=false}
+2022-02-12 00:33:27.050 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep124: INSERT INTO ROOFMATERIAL VALUES (?,?,?,?) {1: 1644615207049, 2: 'test', 3: 1.0, 4: 1}
+2022-02-12 00:33:27.050 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn30: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-02-12 00:33:27.057 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615207049, name='test', price=1.0, durabilityYears=1}]
+2022-02-12 00:33:27.057 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  RoofMaterial{id=1644615207049, name='test', price=1.0, durabilityYears=1}
+2022-02-12 00:33:27.057 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615207049, name='test', price=1.0, durabilityYears=1}]
+2022-02-12 00:33:27.083 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - prep132: INSERT INTO ROOFMATERIAL VALUES (?,?,?,?) {1: 1644615207083, 2: 'test', 3: 1.0, 4: 1}
+2022-02-12 00:33:27.083 [main] INFO  com.kaa.simplebuild.DataProviderJDBC - conn33: url=jdbc:h2:tcp://localhost/~/test user=ADMIN
+2022-02-12 00:33:27.090 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615207083, name='test', price=1.0, durabilityYears=1}]
+2022-02-12 00:33:27.090 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - [RoofMaterial{id=1644615207083, name='test', price=1.0, durabilityYears=1}]
+2022-02-12 00:33:27.106 [main] INFO  com.kaa.simplebuild.DataProviderJDBCTest - create  BuildingTemplate{id=1644615207100, name='test' , idRoofTenplate=2, idMainPartTemplate=1, idBasementTemplate=1}
+2022-02-12 00:33:27.107 [main] ERROR com.kaa.simplebuild.DataProviderJDBC - utils.NullObjectException: entity is null
+2022-02-12 00:33:27.108 [main] DEBUG com.kaa.simplebuild.DataProviderJDBC - prep139:  DELETE FROM BUILDINGTEMPLATE WHERE id= (?) {1: 1644615207100}
+2022-02-12 00:33:27.213 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - create  MainPartMaterial{id=1644615207116, name='test', price=1.0, soundTransmission=1.0}
+2022-02-12 00:33:27.269 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - delnull
+2022-02-12 00:33:27.297 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - delnull
+2022-02-12 00:33:27.330 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - update  MainPartTemplate{id=1644615207298, name='test2' , priceMultiplier=2.2, idMaterial=2}
+2022-02-12 00:33:27.419 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - update  RoofMaterial{id=1644615207374, name='test2', price=2.0, durabilityYears=2}
+2022-02-12 00:33:27.440 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - create  BasementMaterial{id=1644615207430, name='test', price=1.0, frostResistance=1, waterproof=1}
+2022-02-12 00:33:27.468 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - delnull
+2022-02-12 00:33:27.518 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - update  BasementTemplate{id=1644615207470, name='test2' , priceMultiplier=2.2, idMaterial=2, cellar=false}
+2022-02-12 00:33:27.529 [main] ERROR com.kaa.simplebuild.DataProviderXml - utils.NullObjectException: bean not found
+2022-02-12 00:33:27.569 [main] ERROR com.kaa.simplebuild.DataProviderXml - utils.NullObjectException: bean not found
+2022-02-12 00:33:27.587 [main] ERROR com.kaa.simplebuild.DataProviderXml - utils.NullObjectException: bean not found
+2022-02-12 00:33:27.588 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - delnull
+2022-02-12 00:33:27.589 [main] ERROR com.kaa.simplebuild.DataProviderXml - utils.NullObjectException: bean not found
+2022-02-12 00:33:27.607 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - delnull
+2022-02-12 00:33:27.620 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - create  RoofTemplate{id=1644615207609, name='test' , priceMultiplier=1.0, idMaterial=1, insulation=true, pipe=true}
+2022-02-12 00:33:27.631 [main] ERROR com.kaa.simplebuild.DataProviderXml - utils.NullObjectException: bean not found
+2022-02-12 00:33:27.652 [main] ERROR com.kaa.simplebuild.DataProviderXml - utils.NullObjectException: bean not found
+2022-02-12 00:33:27.707 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - update  BuildingTemplate{id=1644615207629, name='test2' , idRoofTenplate=2, idMainPartTemplate=1, idBasementTemplate=1}
+2022-02-12 00:33:27.790 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - update  MainPartMaterial{id=1644615207756, name='test2', price=2.0, soundTransmission=2.0}
+2022-02-12 00:33:27.902 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - delnull
+2022-02-12 00:33:27.934 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - update  BasementMaterial{id=1644615207904, name='test2', price=2.0, frostResistance=2, waterproof=2}
+2022-02-12 00:33:27.992 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - create  MainPartTemplate{id=1644615207968, name='test' , priceMultiplier=1.0, idMaterial=1}
+2022-02-12 00:33:28.200 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - delnull
+2022-02-12 00:33:28.294 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - update  RoofTemplate{id=1644615208202, name='test2' , priceMultiplier=1.0, idMaterial=1, insulation=true, pipe=true}
+2022-02-12 00:33:28.321 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - create  BasementTemplate{id=1644615208309, name='test' , priceMultiplier=1.0, idMaterial=1, cellar=false}
+2022-02-12 00:33:28.346 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - create  RoofMaterial{id=1644615208332, name='test', price=1.0, durabilityYears=1}
+2022-02-12 00:33:28.412 [main] ERROR com.kaa.simplebuild.DataProviderXml - utils.NullObjectException: bean not found
+2022-02-12 00:33:28.422 [main] INFO  com.kaa.simplebuild.DataProviderXMLTest - create  BuildingTemplate{id=1644615208410, name='test' , idRoofTenplate=2, idMainPartTemplate=1, idBasementTemplate=1}
