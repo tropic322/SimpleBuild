@@ -43,12 +43,12 @@ public class NewMain {
         BuildingTemplate template = null;
         Calculator calculator = new Calculator();
         DataProviderXml provider = new DataProviderXml();
-        // DataProviderJDBC provider2 = new DataProviderJDBC();
+        DataProviderJDBC provider2 = new DataProviderJDBC();
         CalculatorUtil calculatorUtil = new CalculatorUtil();
         //calculatorUtil.createCalculator(calculator);
 
         //Calculator calculator1 = calculatorUtil.getCalculator();
-        // logger.info(calculator1);
+        //logger.info(provider2.checkCountRoofMaterial());
         double sumOtherExpenses =0;
 
         //boolean test =false;
@@ -64,7 +64,7 @@ public class NewMain {
         //  test = true;
         //}
         // logger.info(provider.getRoofMaterialById(111));
-
+            /*
         if (args.length == 0){
             System.out.println("No date provider selected");
             //logger.error("No date provider selected");
@@ -315,7 +315,7 @@ public class NewMain {
             default:
                 logger.error("Error in choosing a method");
                 return;
-        }
+        }*/
 
 
 

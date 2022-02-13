@@ -32,12 +32,28 @@ public class Constants {
     public static final String DB_USER = "DB_USER";
     public static final String DB_PASS = "DB_PASS";
     
+    public static final String CREATE_TABLE_ROOF_M="CREATE TABLE IF NOT EXISTS ROOFMATERIAL ( id long UNIQUE NOT NULL , name char(50) NOT NULL , price double NOT NULL , durabilityYears int NOT NULL )";
+    public static final String CREATE_TABLE_MAIN_PART_M="CREATE TABLE IF NOT EXISTS MAINPARTMATERIAL ( id long UNIQUE NOT NULL , name char(50) NOT NULL, price double NOT NULL, soundTransmission double NOT NULL )";
+    public static final String CREATE_TABLE_BASEMENT_M="CREATE TABLE IF NOT EXISTS BASEMENTMATERIAL ( id long UNIQUE NOT NULL , name char(50) NOT NULL, price double NOT NULL, frostresistance int NOT NULL , waterproof int NOT NULL)";
+    public static final String CREATE_TABLE_ROOF_T=" CREATE TABLE IF NOT EXISTS rooftemplate ( id long UNIQUE NOT NULL , name char(50) NOT NULL, pricemultiplier double NOT NULL, id_material long NOT NULL, insulation boolean NOT NULL, pipe boolean NOT NULL, FOREIGN KEY (id_material ) REFERENCES roofmaterial(id) ON DELETE SET NULL ON UPDATE CASCADE )";
+    public static final String CREATE_TABLE_BASEMENT_T="CREATE TABLE IF NOT EXISTS basementtemplate ( id long UNIQUE NOT NULL , name char(50) NOT NULL, pricemultiplier double NOT NULL, id_material long NOT NULL, cellar boolean NOT NULL, FOREIGN KEY (id_material ) REFERENCES basementmaterial(id) ON DELETE SET NULL ON UPDATE CASCADE )";
+    public static final String CREATE_TABLE_MAIN_PART_T="CREATE TABLE IF NOT EXISTS mainparttemplate ( id long UNIQUE NOT NULL , name char(50) NOT NULL, pricemultiplier double NOT NULL, id_material long NOT NULL,  veranda boolean NOT NULL, windows int NOT NULL, FOREIGN KEY (id_material ) REFERENCES mainpartmaterial(id) ON DELETE SET NULL  ON UPDATE CASCADE )";
+    public static final String CREATE_TABLE_BUILDING_T="CREATE TABLE IF NOT EXISTS buildingtemplate ( id long NOT NULL, name char(50) NOT NULL, id_roof_template long NOT NULL, id_main_part_template long NOT NULL, id_basement_template long NOT NULL, FOREIGN KEY (id_roof_template ) REFERENCES rooftemplate(id) ON DELETE SET NULL ON UPDATE CASCADE , FOREIGN KEY (id_main_part_template ) REFERENCES mainparttemplate(id) ON DELETE SET NULL ON UPDATE CASCADE, FOREIGN KEY (id_basement_template ) REFERENCES basementtemplate(id) ON DELETE SET NULL ON UPDATE CASCADE )";
+    
+    public static final String INSERT_TABLE_ROOF_M="INSERT INTO ROOFMATERIAL VALUES (1, 'aaa',1.5,1 ), (2, 'bbb', 2.5,3), (3, 'ccc', 3,5);";
+    public static final String INSERT_TABLE_MAIN_PART_M="INSERT INTO MAINPARTMATERIAL VALUES (1, 'aaa',1.5,1.0 ), (2, 'bbb', 2.5,3.0), (3, 'ccc', 3,5.0);";
+    public static final String INSERT_TABLE_BASEMENT_M="INSERT INTO BASEMENTMATERIAL VALUES (1, 'aaa',1,1,1 ), (2, 'bbb', 2,3,3), (3, 'ccc', 3,5,2);";
+    public static final String INSERT_TABLE_ROOF_T="INSERT INTO ROOFTEMPLATE VALUES (1, 'aaa',1.0,1,true,true ), (2, 'bbb', 2,2,false,true); ";
+    public static final String INSERT_TABLE_BASEMENT_T="INSERT INTO BASEMENTTEMPLATE VALUES (1, 'aaa',1.0,1,true ), (2, 'bbb', 2,2,false);  ";
+    public static final String INSERT_TABLE_MAIN_PART_T="INSERT INTO MAINPARTTEMPLATE VALUES (1, 'aaa',1.0,1,true,3 ), (2, 'bbb', 2,2,false,5); ";
+    public static final String INSERT_TABLE_BUILDING_T="INSERT INTO BUILDINGTEMPLATE VALUES (123, 'aaa',2,1,1 );";
     
     public static final String INSERT_ROOF_MATERIAL = "INSERT INTO ROOFMATERIAL VALUES (?,?,?,?)";
     public static final String ROOF_MATERIAL_ID = "id";
     public static final String ROOF_MATERIAL_NAME = "name";
     public static final String ROOF_MATERIAL_PRICE = "price";
     public static final String ROOF_MATERIAL_DURABILITY_YEARS ="durabilityYears";
+    public static final String ROOF_MATERIAL_COUNT_COLUMN="count(id)";
     public static final int ROOF_MATERIAL_ID_INDEX=1;
     public static final int ROOF_MATERIAL_NAME_INDEX=2;
     public static final int ROOF_MATERIAL_PRICE_INDEX=3;
@@ -46,6 +62,7 @@ public class Constants {
     public static final String SELECT_ROOF_MATERIAL = "SELECT * FROM ROOFMATERIAL ";
     public static final String DELETE_ROOF_MATERIAL = " DELETE FROM ROOFMATERIAL WHERE id= (?)";
     public static final String UPDATE_ROOF_MATERIAL = "UPDATE ROOFMATERIAL SET id=(?), name=(?), price=(?),durabilityYears=(?) WHERE id=(?)";
+    public static final String COUNT_ROOF_MATERIAL="SELECT count(id) FROM ROOFMATERIAL";
     
     public static final String INSERT_BASEMENT_MATERIAL = "INSERT INTO BASEMENTMATERIAL VALUES (?,?,?,?,?)";
     public static final String BASEMENT_MATERIAL_ID = "id";
