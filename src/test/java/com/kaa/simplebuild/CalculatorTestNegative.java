@@ -18,6 +18,11 @@ public class CalculatorTestNegative {
     }
     Calculator clc = new Calculator();
     @Test
+    public void TestInputBuildingTemplate() {       
+       assertFalse(clc.InputBuildingTemplate("aaa","csv")==HistoryContent.Status.SUCCESS);
+        
+    }
+    @Test
     public void TestInputHomeArea() {       
        assertFalse(clc.InputHomeArea("aaa")==HistoryContent.Status.SUCCESS);
         

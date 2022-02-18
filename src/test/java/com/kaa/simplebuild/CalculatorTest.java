@@ -6,6 +6,7 @@ package com.kaa.simplebuild;
 
 import com.kaa.simplebuild.HistoryContent.Status;
 import entity.BuildingTemplate;
+import java.util.List;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import org.junit.Test;
@@ -16,6 +17,11 @@ import org.junit.Test;
  */
 public class CalculatorTest {
     public CalculatorTest() {
+        
+    }
+    @Test
+    public void TestInputBuildingTemplate() {       
+       assertTrue(clc.InputBuildingTemplate("123","csv")==Status.SUCCESS);
         
     }
     Calculator clc = new Calculator();

@@ -62,17 +62,11 @@ public class CalculatorUtil {
         } catch (IOException ex) {
             logger.error(ex);
         }
-        //try{
-         //   beans.get(0);
-       // }
-        //catch(NullPointerException e)
-       // {
-         //   return null;
-        //}        
+               
             
         return beans.get(0);
     }
-    public <T> Status save(List<T> list, String key, String method){
+    private <T> Status save(List<T> list, String key, String method){
         
         Status status;
         try {
@@ -95,7 +89,7 @@ public class CalculatorUtil {
     }  
     
 
-    public <T> Optional<List<T>> read(Class<?> cls, String key){ 
+    private <T> Optional<List<T>> read(Class<?> cls, String key){ 
         Optional<List<T>> optionalList = null; 
         try {
         List<T> list;

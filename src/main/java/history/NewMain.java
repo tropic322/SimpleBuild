@@ -64,7 +64,7 @@ public class NewMain {
         //  test = true;
         //}
         // logger.info(provider.getRoofMaterialById(111));
-            /*
+            
         if (args.length == 0){
             System.out.println("No date provider selected");
             //logger.error("No date provider selected");
@@ -95,7 +95,7 @@ public class NewMain {
         switch (args[1]){
             case "chooseBuildingTemplate":
                 if (args.length != 4){
-                    System.out.println("Invalid number of parameters \n Please enter only 3 parameters \n (dataprovider, method name, building template id, home area )");
+                    System.out.println("Invalid number of parameters \n Please enter only 4 parameters \n (dataprovider, method name, building template id, home area )");
                     logger.info(dataProvider.getBuildingTemplate());
                     //logger.error("Invalid number of parameters");
                     return;
@@ -103,7 +103,7 @@ public class NewMain {
                 try{
 
                     if(dataProvider.getBuildingTemplateById(Long.parseLong(args[2]))!=null){
-                        calculator.InputBuildingTemplate(args[2]);
+                        calculator.InputBuildingTemplate(args[2],args[0]);
                     }else{
                         System.out.println("Invalid building template id \n Such building template does not exist )");
                        //logger.error("Invalid building template id ");
@@ -315,7 +315,7 @@ public class NewMain {
             default:
                 logger.error("Error in choosing a method");
                 return;
-        }*/
+        }
 
 
 

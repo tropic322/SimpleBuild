@@ -108,9 +108,22 @@ public class Calculator {
     public long getIdCalculatedBuilding() {
         return idCalculatedBuilding;
     }
-    public Status InputBuildingTemplate(String template) {
+    
+    public Status InputBuildingTemplate(String template, String dataProviderType ) {
+        IDataProvider dataProvider=null;
+        switch (dataProviderType){
+            case "csv":
+                dataProvider = new DataProviderCsv();
+                break;
+            case "xml":
+                dataProvider = new DataProviderXml();
+                break;
+            case "jdbc":
+                dataProvider = new DataProviderJDBC();
+                break;            
+        }
         try {
-            if(Long.parseLong(template)>0) {
+            if(dataProvider.getBuildingTemplateById(Long.parseLong(template))!=null ) {
                 setIdCalculatedBuilding(Long.parseLong(template));
             }else{
                 return Status.FAULT;
@@ -175,7 +188,7 @@ public class Calculator {
                 break;
             case "jdbc":
                 dataProvider = new DataProviderJDBC();
-                break;
+                break;            
         }
         //dataProvider;
         BuildingTemplate bt = dataProvider.getBuildingTemplateById(idCalculatedBuilding);
