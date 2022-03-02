@@ -21,6 +21,7 @@ import entity.RoofMaterial;
 import entity.RoofTemplate;
 import java.io.FileNotFoundException;
 import java.sql.SQLException;
+import org.apache.log4j.xml.DOMConfigurator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import utils.CalculatorUtil;
@@ -35,8 +36,10 @@ import utils.CalculatorUtil;
 
 public class NewMain {
     private static final Logger logger = LogManager.getLogger(NewMain.class);
+    
 
     public static void main(String[] args) {
+        
         logger.debug("NewMain()[0]: starting application.........");
 
         IDataProvider dataProvider;

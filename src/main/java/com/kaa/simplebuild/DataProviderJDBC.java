@@ -42,17 +42,16 @@ public class DataProviderJDBC implements IDataProvider{
         createTableRoofTemplate();
         createTablMainPartTemplate();
         createTableBasementTemplate();
-        createTablBuildingTemplate();
-        if(checkCountRoofMaterial()==0){
-            insertTableRoofMaterial();
-            insertTableMainPartMaterial();
-            insertTableBasementMaterial();
-            insertTableRoofTemplate();
-            insertTableMainPartTemplate();
-            insertTableBasementTemplate();
-            insertTableBuildingTemplate();
+        createTablBuildingTemplate();        
+        insertTableRoofMaterial();
+        insertTableMainPartMaterial();
+        insertTableBasementMaterial();
+        insertTableRoofTemplate();
+        insertTableMainPartTemplate();
+        insertTableBasementTemplate();
+        insertTableBuildingTemplate();
           
-        }
+        
     }
 
     
@@ -885,23 +884,7 @@ public class DataProviderJDBC implements IDataProvider{
          return status;
     }
     ///////////////////UTILS////////////////////////////////////////////////////
-    /*private <T> Status execute(T list, String sql, String method) {
-        Status status;
-        try {
-            if (list == null) {
-                list = (T) "";
-            }
-            PreparedStatement statement = getConnection().prepareStatement(sql);
-            statement.executeUpdate();
-            getConnection().close();
-            status = Status.SUCCESS;
-        } catch (SQLException e) {
-            status = Status.FAULT;
-            logger.error(e);
-        }
-        IDataProvider.saveHistory(getClass().getName(),method, status, new Gson().toJson(list));        
-        return status;
-    }*/
+    
      private Connection getConnection() {
          
         try {
@@ -922,7 +905,7 @@ public class DataProviderJDBC implements IDataProvider{
         
     }
      
-    
+    ////////////////////CREATE TABLE////////////////////////////////////////////
     public final Status createTableRoofMaterial() {
         Status status;
          try {
@@ -932,8 +915,8 @@ public class DataProviderJDBC implements IDataProvider{
                
                     
                     ps.executeUpdate();
-                logger.info(ps);
-                logger.info(connection);
+                //logger.info(ps);
+                //logger.info(connection);
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
@@ -954,8 +937,8 @@ public class DataProviderJDBC implements IDataProvider{
                
                     
                     ps.executeUpdate();
-                logger.info(ps);
-                logger.info(connection);
+                //logger.info(ps);
+                //logger.info(connection);
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
@@ -967,7 +950,7 @@ public class DataProviderJDBC implements IDataProvider{
          return status;
         
     }
-   public final Status createTableBasementMaterial() {
+    public final Status createTableBasementMaterial() {
         Status status;
          try {
            
@@ -976,8 +959,8 @@ public class DataProviderJDBC implements IDataProvider{
                
                     
                     ps.executeUpdate();
-                logger.info(ps);
-                logger.info(connection);
+                //logger.info(ps);
+                //logger.info(connection);
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
@@ -998,8 +981,8 @@ public class DataProviderJDBC implements IDataProvider{
                
                     
                     ps.executeUpdate();
-                logger.info(ps);
-                logger.info(connection);
+                //logger.info(ps);
+                //logger.info(connection);
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
@@ -1020,8 +1003,8 @@ public class DataProviderJDBC implements IDataProvider{
                
                     
                     ps.executeUpdate();
-                logger.info(ps);
-                logger.info(connection);
+                //logger.info(ps);
+                //logger.info(connection);
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
@@ -1042,8 +1025,8 @@ public class DataProviderJDBC implements IDataProvider{
                
                     
                     ps.executeUpdate();
-                logger.info(ps);
-                logger.info(connection);
+                //logger.info(ps);
+                //logger.info(connection);
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
@@ -1064,8 +1047,8 @@ public class DataProviderJDBC implements IDataProvider{
                
                     
                     ps.executeUpdate();
-                logger.info(ps);
-                logger.info(connection);
+                //logger.info(ps);
+                //logger.info(connection);
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
@@ -1077,158 +1060,209 @@ public class DataProviderJDBC implements IDataProvider{
          return status;
         
     }
+    /////////////////CHECK TABLE////////////////////////////////////////////////
     public final int checkCountRoofMaterial(){
         int count=0;
         try {
             PreparedStatement ps = connection.prepareStatement(
                     Constants.COUNT_ROOF_MATERIAL);
-            ResultSet result = ps.executeQuery();
-            result.next();
-            count =result.getInt(Constants.ROOF_MATERIAL_COUNT_COLUMN);
-            result.close();
+            try (ResultSet result = ps.executeQuery()) {
+                result.next();
+                count =result.getInt(Constants.ROOF_MATERIAL_COUNT_COLUMN);
+            }
         } catch (SQLException e) {
             logger.error(e);
         }
         return count;
         
     }
-    public Status insertTableRoofMaterial() {
-        Status status;
-         try {
-            
-                PreparedStatement ps = connection.prepareStatement(
-                        Constants.INSERT_TABLE_ROOF_M);
-                    ps.executeUpdate();
-                
-                status = Status.SUCCESS;
-            
-        } catch (NullPointerException | SQLException e) {
-             status = Status.FAULT;
+    public final int checkCountMainPartMaterial(){
+        int count=0;
+        try {
+            PreparedStatement ps = connection.prepareStatement(
+                    Constants.COUNT_MAIN_PART_MATERIAL);
+            try (ResultSet result = ps.executeQuery()) {
+                result.next();
+                count =result.getInt(Constants.MAIN_PART_MATERIAL_COUNT_COLUMN);
+            }
+        } catch (SQLException e) {
             logger.error(e);
         }
-         
-        // IDataProvider.saveHistory(getClass().getName(),currentThread().getStackTrace()[1].getMethodName(), status, new Gson().toJson(obj)); 
-        return status;
+        return count;
+        
+    }
+    public final int checkCountBasementMaterial(){
+        int count=0;
+        try {
+            PreparedStatement ps = connection.prepareStatement(
+                    Constants.COUNT_BASEMENT_MATERIAL);
+            try (ResultSet result = ps.executeQuery()) {
+                result.next();
+                count =result.getInt(Constants.BASEMENT_MATERIAL_COUNT_COLUMN);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+        }
+        return count;
+        
+    }
+    public final int checkCountRoofTemplate(){
+        int count=0;
+        try {
+            PreparedStatement ps = connection.prepareStatement(
+                    Constants.COUNT_ROOF_TEMPLATE);
+            try (ResultSet result = ps.executeQuery()) {
+                result.next();
+                count =result.getInt(Constants.ROOF_TEMPLATE_COUNT_COLUMN);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+        }
+        return count;
+        
+    }
+    public final int checkCountMainPartTemplate(){
+        int count=0;
+        try {
+            PreparedStatement ps = connection.prepareStatement(
+                    Constants.COUNT_MAIN_PART_TEMPLATE);
+            try (ResultSet result = ps.executeQuery()) {
+                result.next();
+                count =result.getInt(Constants.MAIN_PART_TEMPLATE_COUNT_COLUMN);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+        }
+        return count;
+        
+    }
+    public final int checkCountBasementTemplate(){
+        int count=0;
+        try {
+            PreparedStatement ps = connection.prepareStatement(
+                    Constants.COUNT_BASEMENT_TEMPLATE);
+            try (ResultSet result = ps.executeQuery()) {
+                result.next();
+                count =result.getInt(Constants.BASEMENT_TEMPLATE_COUNT_COLUMN);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+        }
+        return count;
+        
+    }
+    public final int checkCountBuildingTemplate(){
+        int count=0;
+        try {
+            PreparedStatement ps = connection.prepareStatement(
+                    Constants.COUNT_BUILDING_TEMPLATE);
+            try (ResultSet result = ps.executeQuery()) {
+                result.next();
+                count =result.getInt(Constants.BUILDING_TEMPLATE_COUNT_COLUMN);
+            }
+        } catch (SQLException e) {
+            logger.error(e);
+        }
+        return count;
+        
+    }
+    //////////////INSERT TABLE//////////////////////////////////////////////////
+    public Status insertTableRoofMaterial() {
+        if(checkCountRoofMaterial()==0){        
+         try {
+            
+            PreparedStatement ps = connection.prepareStatement(
+                Constants.INSERT_TABLE_ROOF_M);
+            ps.executeUpdate();
+            
+        } catch (NullPointerException | SQLException e) {
+            logger.error(e);
+            return Status.FAULT;            
+            }         
+        } 
+        return Status.SUCCESS;
+        
     }
     public Status insertTableMainPartMaterial() {
-        Status status;
-         try {
-            
+        if(checkCountMainPartMaterial()==0){
+            try{
                 PreparedStatement ps = connection.prepareStatement(
-                        Constants.INSERT_TABLE_MAIN_PART_M);
-                    ps.executeUpdate();
-                
-                status = Status.SUCCESS;
-            
-        } catch (NullPointerException | SQLException e) {
-             status = Status.FAULT;
-            logger.error(e);
+                    Constants.INSERT_TABLE_MAIN_PART_M);
+                ps.executeUpdate();
+            }catch (NullPointerException | SQLException e){
+                logger.error(e);
+                return Status.FAULT;
+            }
         }
-         
-        // IDataProvider.saveHistory(getClass().getName(),currentThread().getStackTrace()[1].getMethodName(), status, new Gson().toJson(obj)); 
-        return status;
+        return Status.SUCCESS;
     }
     public Status insertTableBasementMaterial() {
-        Status status;
-         try {
-            
+        if(checkCountBasementMaterial()==0){        
+            try {
                 PreparedStatement ps = connection.prepareStatement(
-                        Constants.INSERT_TABLE_BASEMENT_M);
-                    ps.executeUpdate();
-                
-                status = Status.SUCCESS;
-            
-        } catch (NullPointerException | SQLException e) {
-             status = Status.FAULT;
-            logger.error(e);
+                    Constants.INSERT_TABLE_BASEMENT_M);
+                ps.executeUpdate();
+            } catch (NullPointerException | SQLException e) {
+                logger.error(e);
+                return Status.FAULT;            
+            }
         }
-         
-        // IDataProvider.saveHistory(getClass().getName(),currentThread().getStackTrace()[1].getMethodName(), status, new Gson().toJson(obj)); 
-        return status;
+        return Status.SUCCESS;
     }
     public Status insertTableRoofTemplate() {
-        Status status;
-         try {
-            
+        if(checkCountRoofTemplate()==0){ 
+            try {
                 PreparedStatement ps = connection.prepareStatement(
-                        Constants.INSERT_TABLE_ROOF_T);
-                    ps.executeUpdate();
-                
-                status = Status.SUCCESS;
-            
-        } catch (NullPointerException | SQLException e) {
-             status = Status.FAULT;
-            logger.error(e);
-        }
-         
-        // IDataProvider.saveHistory(getClass().getName(),currentThread().getStackTrace()[1].getMethodName(), status, new Gson().toJson(obj)); 
-        return status;
+                    Constants.INSERT_TABLE_ROOF_T);
+                ps.executeUpdate();
+            } catch (NullPointerException | SQLException e) {
+                logger.error(e);
+                return Status.FAULT;            
+            }         
+        } 
+        return Status.SUCCESS;
     }
     public Status insertTableMainPartTemplate() {
-        Status status;
-         try {
-            
+        if(checkCountMainPartTemplate()==0){
+            try {            
                 PreparedStatement ps = connection.prepareStatement(
-                        Constants.INSERT_TABLE_MAIN_PART_T);
-                    ps.executeUpdate();
-                
-                status = Status.SUCCESS;
+                    Constants.INSERT_TABLE_MAIN_PART_T);
+                ps.executeUpdate();                
             
-        } catch (NullPointerException | SQLException e) {
-             status = Status.FAULT;
-            logger.error(e);
-        }
-         
-        // IDataProvider.saveHistory(getClass().getName(),currentThread().getStackTrace()[1].getMethodName(), status, new Gson().toJson(obj)); 
-        return status;
+            } catch (NullPointerException | SQLException e) {
+                logger.error(e);
+                return Status.FAULT;            
+            }
+            
+        } 
+        return Status.SUCCESS;
     }
     public Status insertTableBasementTemplate() {
-        Status status;
-         try {
-            
+        if(checkCountBasementTemplate()==0){
+            try{
                 PreparedStatement ps = connection.prepareStatement(
-                        Constants.INSERT_TABLE_BASEMENT_T);
-                    ps.executeUpdate();
-                
-                status = Status.SUCCESS;
-            
-        } catch (NullPointerException | SQLException e) {
-             status = Status.FAULT;
-            logger.error(e);
-        }
+                    Constants.INSERT_TABLE_BASEMENT_T);
+                ps.executeUpdate();
+            } catch (NullPointerException | SQLException e) {
+                logger.error(e);
+                return Status.FAULT;            
+            }
          
-        // IDataProvider.saveHistory(getClass().getName(),currentThread().getStackTrace()[1].getMethodName(), status, new Gson().toJson(obj)); 
-        return status;
+        }
+        return Status.SUCCESS;
     }
     public Status insertTableBuildingTemplate() {
-        Status status;
-         try {
-            
+        if(checkCountBuildingTemplate()==0){
+            try{
                 PreparedStatement ps = connection.prepareStatement(
-                        Constants.INSERT_TABLE_BUILDING_T);
-                    ps.executeUpdate();
-                
-                status = Status.SUCCESS;
-            
-        } catch (NullPointerException | SQLException e) {
-             status = Status.FAULT;
-            logger.error(e);
+                    Constants.INSERT_TABLE_BUILDING_T);
+                ps.executeUpdate();
+            } catch (NullPointerException | SQLException e) {
+                logger.error(e);
+                return Status.FAULT;            
+            }
         }
-         
-        // IDataProvider.saveHistory(getClass().getName(),currentThread().getStackTrace()[1].getMethodName(), status, new Gson().toJson(obj)); 
-        return status;
+        return Status.SUCCESS;
     }
-    //Status createRoofMaterial(RoofMaterial obj) {
-       // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    //}
-
-    
-
-    
-
-
-    
-
-    
     
 }
