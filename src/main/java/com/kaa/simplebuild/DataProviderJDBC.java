@@ -243,16 +243,15 @@ public class DataProviderJDBC implements IDataProvider{
         try {
             PreparedStatement ps = connection.prepareStatement(
                     Constants.SELECT_ROOF_MATERIAL);
-            ResultSet result = ps.executeQuery();
-            while (result.next()) {
-                    RoofMaterial obj = new RoofMaterial();
-                    obj.setId(result.getLong(Constants.ROOF_MATERIAL_ID));
-                    obj.setName(result.getString(Constants.ROOF_MATERIAL_NAME));
-                    obj.setPrice(result.getDouble(Constants.ROOF_MATERIAL_PRICE));
-                    obj.setDurabilityYears(result.getInt(Constants.ROOF_MATERIAL_DURABILITY_YEARS));
-                    list.add(obj);
-            }
-            result.close();
+             try (ResultSet result = ps.executeQuery()) {
+                 while (result.next()) {
+                     RoofMaterial obj = new RoofMaterial();
+                     obj.setId(result.getLong(Constants.ROOF_MATERIAL_ID));
+                     obj.setName(result.getString(Constants.ROOF_MATERIAL_NAME));
+                     obj.setPrice(result.getDouble(Constants.ROOF_MATERIAL_PRICE));
+                     obj.setDurabilityYears(result.getInt(Constants.ROOF_MATERIAL_DURABILITY_YEARS));
+                     list.add(obj);
+                 }}
         } catch (SQLException e) {
             logger.error(e);
         }
@@ -264,18 +263,17 @@ public class DataProviderJDBC implements IDataProvider{
         try {
             PreparedStatement ps = connection.prepareStatement(
                     Constants.SELECT_BASEMENT_MATERIAL);
-            ResultSet result = ps.executeQuery();
-            while (result.next()) {
-                    BasementMaterial obj = new BasementMaterial();
-                    obj.setId(result.getLong(Constants.BASEMENT_MATERIAL_ID));
-                    obj.setName(result.getString(Constants.BASEMENT_MATERIAL_NAME));
-                    obj.setPrice(result.getDouble(Constants.BASEMENT_MATERIAL_PRICE));
-                    obj.setFrostResistance(result.getInt(Constants.BASEMENT_MATERIAL_FROST_RESISTANCE));
-                    obj.setWaterproof(result.getInt(Constants.BASEMENT_MATERIAL_WATERPROOF));
-                    
-                    list.add(obj);
-            }
-            result.close();
+             try (ResultSet result = ps.executeQuery()) {
+                 while (result.next()) {
+                     BasementMaterial obj = new BasementMaterial();
+                     obj.setId(result.getLong(Constants.BASEMENT_MATERIAL_ID));
+                     obj.setName(result.getString(Constants.BASEMENT_MATERIAL_NAME));
+                     obj.setPrice(result.getDouble(Constants.BASEMENT_MATERIAL_PRICE));
+                     obj.setFrostResistance(result.getInt(Constants.BASEMENT_MATERIAL_FROST_RESISTANCE));
+                     obj.setWaterproof(result.getInt(Constants.BASEMENT_MATERIAL_WATERPROOF));
+                     
+                     list.add(obj);
+                 }}
         } catch (SQLException e) {
             logger.error(e);
         }
@@ -287,16 +285,15 @@ public class DataProviderJDBC implements IDataProvider{
         try {
             PreparedStatement ps = connection.prepareStatement(
                     Constants.SELECT_MAIN_PART_MATERIAL);
-            ResultSet result = ps.executeQuery();
-            while (result.next()) {
-                    MainPartMaterial obj = new MainPartMaterial();
-                    obj.setId(result.getLong(Constants.MAIN_PART_MATERIAL_ID));
-                    obj.setName(result.getString(Constants.MAIN_PART_MATERIAL_NAME));
-                    obj.setPrice(result.getDouble(Constants.MAIN_PART_MATERIAL_PRICE));
-                    obj.setSoundTransmission(result.getDouble(Constants.MAIN_PART_MATERIAL_SOUND_TRANSMISSION));
-                    list.add(obj);
-            }
-            result.close();
+             try (ResultSet result = ps.executeQuery()) {
+                 while (result.next()) {
+                     MainPartMaterial obj = new MainPartMaterial();
+                     obj.setId(result.getLong(Constants.MAIN_PART_MATERIAL_ID));
+                     obj.setName(result.getString(Constants.MAIN_PART_MATERIAL_NAME));
+                     obj.setPrice(result.getDouble(Constants.MAIN_PART_MATERIAL_PRICE));
+                     obj.setSoundTransmission(result.getDouble(Constants.MAIN_PART_MATERIAL_SOUND_TRANSMISSION));
+                     list.add(obj);
+                 }}
         } catch (SQLException e) {
             logger.error(e);
         }
@@ -308,18 +305,17 @@ public class DataProviderJDBC implements IDataProvider{
         try {
             PreparedStatement ps = connection.prepareStatement(
                     Constants.SELECT_MAIN_PART_TEMPLATE);
-            ResultSet result = ps.executeQuery();
-            while (result.next()) {
-                    MainPartTemplate obj = new MainPartTemplate();
-                    obj.setId(result.getLong(Constants.MAIN_PART_TEMPLATE_ID));
-                    obj.setName(result.getString(Constants.MAIN_PART_TEMPLATE_NAME));
-                    obj.setPriceMultiplier(result.getDouble(Constants.MAIN_PART_TEMPLATE_PRICEMULTIPLIER));
-                    obj.setIdMaterial(result.getLong(Constants.MAIN_PART_TEMPLATE_ID_MATERIAL_INDEX));
-                    obj.setVeranda(result.getBoolean(Constants.MAIN_PART_TEMPLATE_VERANDA_INDEX));
-                    obj.setWindows(result.getInt(Constants.MAIN_PART_TEMPLATE_WINDOWS_INDEX));
-                    list.add(obj);
-            }
-            result.close();
+             try (ResultSet result = ps.executeQuery()) {
+                 while (result.next()) {
+                     MainPartTemplate obj = new MainPartTemplate();
+                     obj.setId(result.getLong(Constants.MAIN_PART_TEMPLATE_ID));
+                     obj.setName(result.getString(Constants.MAIN_PART_TEMPLATE_NAME));
+                     obj.setPriceMultiplier(result.getDouble(Constants.MAIN_PART_TEMPLATE_PRICEMULTIPLIER));
+                     obj.setIdMaterial(result.getLong(Constants.MAIN_PART_TEMPLATE_ID_MATERIAL_INDEX));
+                     obj.setVeranda(result.getBoolean(Constants.MAIN_PART_TEMPLATE_VERANDA_INDEX));
+                     obj.setWindows(result.getInt(Constants.MAIN_PART_TEMPLATE_WINDOWS_INDEX));
+                     list.add(obj);
+                 }}
         } catch (SQLException e) {
             logger.error(e);
         }
@@ -331,17 +327,16 @@ public class DataProviderJDBC implements IDataProvider{
         try {
             PreparedStatement ps = connection.prepareStatement(
                     Constants.SELECT_BASEMENT_TEMPLATE);
-            ResultSet result = ps.executeQuery();
-            while (result.next()) {
-                    BasementTemplate obj = new BasementTemplate();
-                    obj.setId(result.getLong(Constants.BASEMENT_TEMPLATE_ID));
-                    obj.setName(result.getString(Constants.BASEMENT_TEMPLATE_NAME));
-                    obj.setPriceMultiplier(result.getDouble(Constants.BASEMENT_TEMPLATE_PRICEMULTIPLIER));
-                    obj.setIdMaterial(result.getLong(Constants.BASEMENT_TEMPLATE_ID_MATERIAL_INDEX));
-                    obj.setCellar(result.getBoolean(Constants.BASEMENT_TEMPLATE_CELLAR_INDEX));
-                    list.add(obj);
-            }
-            result.close();
+             try (ResultSet result = ps.executeQuery()) {
+                 while (result.next()) {
+                     BasementTemplate obj = new BasementTemplate();
+                     obj.setId(result.getLong(Constants.BASEMENT_TEMPLATE_ID));
+                     obj.setName(result.getString(Constants.BASEMENT_TEMPLATE_NAME));
+                     obj.setPriceMultiplier(result.getDouble(Constants.BASEMENT_TEMPLATE_PRICEMULTIPLIER));
+                     obj.setIdMaterial(result.getLong(Constants.BASEMENT_TEMPLATE_ID_MATERIAL_INDEX));
+                     obj.setCellar(result.getBoolean(Constants.BASEMENT_TEMPLATE_CELLAR_INDEX));
+                     list.add(obj);
+                 }}
         } catch (SQLException e) {
             logger.error(e);
         }
@@ -353,18 +348,17 @@ public class DataProviderJDBC implements IDataProvider{
         try {
             PreparedStatement ps = connection.prepareStatement(
                     Constants.SELECT_ROOF_TEMPLATE);
-            ResultSet result = ps.executeQuery();
-            while (result.next()) {
-                    RoofTemplate obj = new RoofTemplate();
-                    obj.setId(result.getLong(Constants.ROOF_TEMPLATE_ID));
-                    obj.setName(result.getString(Constants.ROOF_TEMPLATE_NAME));
-                    obj.setPriceMultiplier(result.getDouble(Constants.ROOF_TEMPLATE_PRICEMULTIPLIER));
-                    obj.setIdMaterial(result.getLong(Constants.ROOF_TEMPLATE_ID_MATERIAL_INDEX));
-                    obj.setInsulation(result.getBoolean(Constants.ROOF_TEMPLATE_INSULATION_INDEX));
-                    obj.setPipe(result.getBoolean(Constants.ROOF_TEMPLATE_PIPE_INDEX));
-                    list.add(obj);
-            }
-            result.close();
+             try (ResultSet result = ps.executeQuery()) {
+                 while (result.next()) {
+                     RoofTemplate obj = new RoofTemplate();
+                     obj.setId(result.getLong(Constants.ROOF_TEMPLATE_ID));
+                     obj.setName(result.getString(Constants.ROOF_TEMPLATE_NAME));
+                     obj.setPriceMultiplier(result.getDouble(Constants.ROOF_TEMPLATE_PRICEMULTIPLIER));
+                     obj.setIdMaterial(result.getLong(Constants.ROOF_TEMPLATE_ID_MATERIAL_INDEX));
+                     obj.setInsulation(result.getBoolean(Constants.ROOF_TEMPLATE_INSULATION_INDEX));
+                     obj.setPipe(result.getBoolean(Constants.ROOF_TEMPLATE_PIPE_INDEX));
+                     list.add(obj);
+                 }}
         } catch (SQLException e) {
             logger.error(e);
         }
@@ -376,17 +370,16 @@ public class DataProviderJDBC implements IDataProvider{
         try {
             PreparedStatement ps = connection.prepareStatement(
                     Constants.SELECT_BUILDING_TEMPLATE);
-            ResultSet result = ps.executeQuery();
-            while (result.next()) {
-                    BuildingTemplate obj = new BuildingTemplate();
-                    obj.setId(result.getLong(Constants.BUILDING_TEMPLATE_ID));
-                    obj.setName(result.getString(Constants.BUILDING_TEMPLATE_NAME));
-                    obj.setIdRoofTemplate(result.getLong(Constants.BUILDING_TEMPLATE_ID_ROOF_TEMPLATE));
-                    obj.setIdMainPartTemplate(result.getLong(Constants.BUILDING_TEMPLATE_ID_MAIN_PART_TEMPLATE));
-                    obj.setIdBasementTemplate(result.getLong(Constants.BUILDING_TEMPLATE_ID_BASEMENT_TEMPLATE));
-                    list.add(obj);
-            }
-            result.close();
+             try (ResultSet result = ps.executeQuery()) {
+                 while (result.next()) {
+                     BuildingTemplate obj = new BuildingTemplate();
+                     obj.setId(result.getLong(Constants.BUILDING_TEMPLATE_ID));
+                     obj.setName(result.getString(Constants.BUILDING_TEMPLATE_NAME));
+                     obj.setIdRoofTemplate(result.getLong(Constants.BUILDING_TEMPLATE_ID_ROOF_TEMPLATE));
+                     obj.setIdMainPartTemplate(result.getLong(Constants.BUILDING_TEMPLATE_ID_MAIN_PART_TEMPLATE));
+                     obj.setIdBasementTemplate(result.getLong(Constants.BUILDING_TEMPLATE_ID_BASEMENT_TEMPLATE));
+                     list.add(obj);
+                 }}
         } catch (SQLException e) {
             logger.error(e);
         }
@@ -416,7 +409,7 @@ public class DataProviderJDBC implements IDataProvider{
         List<RoofMaterial> entity; 
         try {
             entity = list.stream().filter(obj -> obj.getId() == id).collect(Collectors.toList());
-            logger.debug(entity);
+            //logger.debug(entity);
             if (entity.isEmpty()){                
                 throw new NullObjectException("entity is null");
             }
@@ -1167,7 +1160,7 @@ public class DataProviderJDBC implements IDataProvider{
         
     }
     //////////////INSERT TABLE//////////////////////////////////////////////////
-    public Status insertTableRoofMaterial() {
+    private Status insertTableRoofMaterial() {
         if(checkCountRoofMaterial()==0){        
          try {
             
@@ -1183,7 +1176,7 @@ public class DataProviderJDBC implements IDataProvider{
         return Status.SUCCESS;
         
     }
-    public Status insertTableMainPartMaterial() {
+    private Status insertTableMainPartMaterial() {
         if(checkCountMainPartMaterial()==0){
             try{
                 PreparedStatement ps = connection.prepareStatement(
@@ -1196,7 +1189,7 @@ public class DataProviderJDBC implements IDataProvider{
         }
         return Status.SUCCESS;
     }
-    public Status insertTableBasementMaterial() {
+    private Status insertTableBasementMaterial() {
         if(checkCountBasementMaterial()==0){        
             try {
                 PreparedStatement ps = connection.prepareStatement(
@@ -1209,7 +1202,7 @@ public class DataProviderJDBC implements IDataProvider{
         }
         return Status.SUCCESS;
     }
-    public Status insertTableRoofTemplate() {
+    private Status insertTableRoofTemplate() {
         if(checkCountRoofTemplate()==0){ 
             try {
                 PreparedStatement ps = connection.prepareStatement(
@@ -1222,7 +1215,7 @@ public class DataProviderJDBC implements IDataProvider{
         } 
         return Status.SUCCESS;
     }
-    public Status insertTableMainPartTemplate() {
+    private Status insertTableMainPartTemplate() {
         if(checkCountMainPartTemplate()==0){
             try {            
                 PreparedStatement ps = connection.prepareStatement(
@@ -1237,7 +1230,7 @@ public class DataProviderJDBC implements IDataProvider{
         } 
         return Status.SUCCESS;
     }
-    public Status insertTableBasementTemplate() {
+    private Status insertTableBasementTemplate() {
         if(checkCountBasementTemplate()==0){
             try{
                 PreparedStatement ps = connection.prepareStatement(
@@ -1251,7 +1244,7 @@ public class DataProviderJDBC implements IDataProvider{
         }
         return Status.SUCCESS;
     }
-    public Status insertTableBuildingTemplate() {
+    private Status insertTableBuildingTemplate() {
         if(checkCountBuildingTemplate()==0){
             try{
                 PreparedStatement ps = connection.prepareStatement(

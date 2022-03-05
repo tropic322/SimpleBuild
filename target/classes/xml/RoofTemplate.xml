@@ -2,7 +2,7 @@
    <object class="entity.RoofTemplate">
       <ID>2</ID>
       <NAME>222</NAME>
-      <PRICEMULTIPLIER>2.1</PRICEMULTIPLIER>
+      <PRICEMULTIPLIER>2.0</PRICEMULTIPLIER>
       <IDMATERIAL>2</IDMATERIAL>
       <INSULATION>true</INSULATION>
       <PIPE>false</PIPE>

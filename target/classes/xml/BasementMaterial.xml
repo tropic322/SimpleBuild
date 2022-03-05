@@ -1,9 +1,9 @@
 <list>
    <object class="entity.BasementMaterial">
-      <ID>1644088507271</ID>
+      <ID>1</ID>
       <NAME>test2</NAME>
-      <PRICE>2.0</PRICE>
-      <FROST_RESISTANCE>2</FROST_RESISTANCE>
-      <WATERPROOF>2</WATERPROOF>
+      <PRICE>1.0</PRICE>
+      <FROST_RESISTANCE>1</FROST_RESISTANCE>
+      <WATERPROOF>1</WATERPROOF>
    </object>
 </list>

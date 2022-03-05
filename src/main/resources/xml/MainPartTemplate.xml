@@ -1,1 +1,10 @@
-<list/>
+<list>
+   <object class="entity.MainPartTemplate">
+      <ID>1</ID>
+      <NAME>asd</NAME>
+      <PRICEMULTIPLIER>1.0</PRICEMULTIPLIER>
+      <IDMATERIAL>1</IDMATERIAL>
+      <VERANDA>true</VERANDA>
+      <WINDOWS>3</WINDOWS>
+   </object>
+</list>

@@ -114,7 +114,7 @@ public class CalculatorUtil {
         }
         
         } catch (IOException ex) {
-            java.util.logging.Logger.getLogger(DataProviderCsv.class.getName()).log(Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CalculatorUtil.class.getName()).log(Level.SEVERE, null, ex);
         }
         return optionalList;
     }

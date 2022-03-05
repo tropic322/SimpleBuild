@@ -45,14 +45,15 @@ public class NewMain {
         IDataProvider dataProvider;
         BuildingTemplate template = null;
         Calculator calculator = new Calculator();
-        DataProviderXml provider = new DataProviderXml();
-        DataProviderJDBC provider2 = new DataProviderJDBC();
+        //DataProviderXml provider = new DataProviderXml();
+        //DataProviderJDBC provider2 = new DataProviderJDBC();
         CalculatorUtil calculatorUtil = new CalculatorUtil();
         //calculatorUtil.createCalculator(calculator);
-
+        //MainPartTemplate obj = new MainPartTemplate(1,"asd",1.0,1,true,3);
+        //provider.createMainPartTemplate(obj);
         //Calculator calculator1 = calculatorUtil.getCalculator();
         //logger.info(provider2.checkCountRoofMaterial());
-        double sumOtherExpenses =0;
+        //double sumOtherExpenses =0;
 
         //boolean test =false;
         // provider.delBasementTemplate(1642359887746L);
@@ -96,7 +97,7 @@ public class NewMain {
         }
 
         switch (args[1]){
-            case "chooseBuildingTemplate":
+            case "ChooseBuildingTemplate":
                 if (args.length != 4){
                     System.out.println("Invalid number of parameters \n Please enter only 4 parameters \n (dataprovider, method name, building template id, home area )");
                     logger.info(dataProvider.getBuildingTemplate());

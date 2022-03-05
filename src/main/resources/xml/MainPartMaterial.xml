@@ -1,8 +1,8 @@
 <list>
    <object class="entity.MainPartMaterial">
-      <ID>1644088507199</ID>
+      <ID>1</ID>
       <NAME>test2</NAME>
-      <PRICE>2.0</PRICE>
-      <SOUND_TRANSMISSION>2.0</SOUND_TRANSMISSION>
+      <PRICE>1.5</PRICE>
+      <SOUND_TRANSMISSION>1.0</SOUND_TRANSMISSION>
    </object>
 </list>

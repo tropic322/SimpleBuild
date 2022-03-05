@@ -1,6 +1,6 @@
 <list>
    <object class="entity.BuildingTemplate">
-      <ID>1644088507175</ID>
+      <ID>123</ID>
       <NAME>test2</NAME>
       <IDROOFTEMPLATE>2</IDROOFTEMPLATE>
       <IDMAINPARTTEMPLATE>1</IDMAINPARTTEMPLATE>
