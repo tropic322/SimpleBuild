@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.kaa.simplebuild;
 
 import utils.NullObjectException;
@@ -434,11 +430,11 @@ public class DataProviderXml implements IDataProvider{
          
         try {
             String path =ConfigurationUtil.getConfigurationEntry(key);
-            FileReader fileReader = new FileReader(path);
-            Serializer serializer = new Persister();
-
-            XmlWrap<T> container = serializer.read(XmlWrap.class, fileReader);
-            fileReader.close();
+            XmlWrap<T> container;
+            try (FileReader fileReader = new FileReader(path)) {
+                Serializer serializer = new Persister();
+                container = serializer.read(XmlWrap.class, fileReader);
+            }
 
             if (container.getList() == null) {
                 return new ArrayList<>();
@@ -451,8 +447,7 @@ public class DataProviderXml implements IDataProvider{
             return new ArrayList<>();
         }
     }
-     public <T>  Status save( List<T> list, String key, String method) {/// return status
-        //String path =ConfigurationUtil.getConfigurationEntry(key);
+     public <T>  Status save( List<T> list, String key, String method) {        
         Status status;
         try {
             String path =ConfigurationUtil.getConfigurationEntry(key);

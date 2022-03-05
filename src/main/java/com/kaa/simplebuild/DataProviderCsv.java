@@ -65,8 +65,7 @@ public class DataProviderCsv implements IDataProvider{
         entitylist.add(obj);
         status = save(entitylist, Constants.MAIN_PART_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
         }
-        return status;
-        //IDataProvider.saveHistory(getClass().getName(), historyContentStatus, new Gson().toJson(obj));
+        return status;        
 
     }
     @Override
@@ -489,8 +488,7 @@ public class DataProviderCsv implements IDataProvider{
     @Override
     public Status delBasementMaterial(long id)  {
       List<BasementMaterial> entities = getBasementMaterial();        
-        //if(getBasementMaterialById(id)!=null){ 
-        //BasementMaterial obj = getBasementMaterialById(id);    
+            
         entities.removeIf(entity -> (entity.getId() == id)); 
          return save(entities,Constants.BASEMENT_MATERIAL_CSV,currentThread().getStackTrace()[1].getMethodName());
         
@@ -563,9 +561,7 @@ public class DataProviderCsv implements IDataProvider{
         List<T> list;
         File file;
         logger.info(ConfigurationUtil.getConfigurationEntry(key));
-            file = new File(ConfigurationUtil.getConfigurationEntry(key)); //
-        
-               
+            file = new File(ConfigurationUtil.getConfigurationEntry(key)); 
                    
         if (file.length() != 0){
             try {

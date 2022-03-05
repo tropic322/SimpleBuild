@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.kaa.simplebuild;
 
 import com.kaa.simplebuild.HistoryContent.Status;
@@ -16,8 +12,7 @@ import entity.MainPartTemplate;
 import entity.RoofMaterial;
 import entity.RoofTemplate;
 import org.simpleframework.xml.Element;
-import utils.CalculatorUtil;
-//import history.NewMain.dataProvider;
+
 /**
  *
  * @author Alexandr
@@ -174,7 +169,7 @@ public class Calculator {
         }
         return Status.SUCCESS;
     }
-    //InputBuildingTemplate
+    
     public double CalculateHomeCost(String dataProviderType)
     {
 
@@ -190,9 +185,8 @@ public class Calculator {
                 dataProvider = new DataProviderJDBC();
                 break;            
         }
-        //dataProvider;
-        BuildingTemplate bt = dataProvider.getBuildingTemplateById(idCalculatedBuilding);
-        //проверка на null и логирование
+        
+        BuildingTemplate bt = dataProvider.getBuildingTemplateById(idCalculatedBuilding);        
 
         RoofTemplate roofTemplate =dataProvider.getRoofTemplateById(bt.getIdRoofTemplate());
         RoofMaterial roofMaterial = dataProvider.getRoofMaterialById(roofTemplate.getIdMaterial());

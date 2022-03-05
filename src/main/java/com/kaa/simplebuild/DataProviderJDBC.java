@@ -88,9 +88,7 @@ public class DataProviderJDBC implements IDataProvider{
     public Status createMainPartMaterial(MainPartMaterial obj) {
         Status status;
          try {
-            //check id
             
-                
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.INSERT_MAIN_PART_MATERIAL);
                
@@ -139,9 +137,7 @@ public class DataProviderJDBC implements IDataProvider{
     public Status createMainPartTemplate(MainPartTemplate obj) {
          Status status;
          try {
-            //check id
             
-                
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.INSERT_MAIN_PART_TEMPLATE);
                
@@ -741,9 +737,7 @@ public class DataProviderJDBC implements IDataProvider{
         BasementMaterial obj = getBasementMaterialById(id);
         Status status;
          try {
-            //check id
             
-                
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.DELETE_BASEMENT_MATERIAL);
                
@@ -789,9 +783,7 @@ public class DataProviderJDBC implements IDataProvider{
         MainPartTemplate obj = getMainPartTemplateById(id);
         Status status;
          try {
-            //check id
             
-                
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.DELETE_MAIN_PART_TEMPLATE);
                
@@ -905,19 +897,15 @@ public class DataProviderJDBC implements IDataProvider{
            
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.CREATE_TABLE_ROOF_M);
-               
                     
                     ps.executeUpdate();
-                //logger.info(ps);
-                //logger.info(connection);
+                
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
             status = Status.FAULT;
             logger.error(e);
         }
-         
-         
          return status;
         
     }
@@ -927,19 +915,15 @@ public class DataProviderJDBC implements IDataProvider{
            
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.CREATE_TABLE_MAIN_PART_M);
-               
                     
                     ps.executeUpdate();
-                //logger.info(ps);
-                //logger.info(connection);
+                
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
             status = Status.FAULT;
             logger.error(e);
         }
-         
-         
          return status;
         
     }
@@ -949,19 +933,15 @@ public class DataProviderJDBC implements IDataProvider{
            
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.CREATE_TABLE_BASEMENT_M);
-               
                     
                     ps.executeUpdate();
-                //logger.info(ps);
-                //logger.info(connection);
+                
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
             status = Status.FAULT;
             logger.error(e);
         }
-         
-         
          return status;
         
     }
@@ -971,19 +951,15 @@ public class DataProviderJDBC implements IDataProvider{
            
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.CREATE_TABLE_ROOF_T);
-               
                     
                     ps.executeUpdate();
-                //logger.info(ps);
-                //logger.info(connection);
+                
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
             status = Status.FAULT;
             logger.error(e);
         }
-         
-         
          return status;
         
     }
@@ -993,19 +969,15 @@ public class DataProviderJDBC implements IDataProvider{
            
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.CREATE_TABLE_BASEMENT_T);
-               
                     
                     ps.executeUpdate();
-                //logger.info(ps);
-                //logger.info(connection);
+                
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
             status = Status.FAULT;
             logger.error(e);
         }
-         
-         
          return status;
         
     }
@@ -1015,19 +987,15 @@ public class DataProviderJDBC implements IDataProvider{
            
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.CREATE_TABLE_MAIN_PART_T);
-               
                     
                     ps.executeUpdate();
-                //logger.info(ps);
-                //logger.info(connection);
+                
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
             status = Status.FAULT;
             logger.error(e);
         }
-         
-         
          return status;
         
     }
@@ -1037,19 +1005,15 @@ public class DataProviderJDBC implements IDataProvider{
            
                 PreparedStatement ps = connection.prepareStatement(
                         Constants.CREATE_TABLE_BUILDING_T);
-               
                     
                     ps.executeUpdate();
-                //logger.info(ps);
-                //logger.info(connection);
+                
                 status = Status.SUCCESS;
             
         } catch (NullPointerException | SQLException e) {
             status = Status.FAULT;
             logger.error(e);
         }
-         
-         
          return status;
         
     }

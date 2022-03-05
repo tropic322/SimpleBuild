@@ -23,7 +23,6 @@ public class BasementTemplate extends Template {
         return cellar;
     }
     
-    //enum Season { WINTER, SPRING, SUMMER, AUTUMN };//////
     
     public BasementTemplate(long id, String name,double PriceMultiplier, int idMaterial, boolean cellar) {
         super(id,name,PriceMultiplier,idMaterial);

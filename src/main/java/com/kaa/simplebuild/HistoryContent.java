@@ -28,7 +28,14 @@ public class HistoryContent {
         this.status = status;
         this.jsonEntity = jsonEntity;
     }
+    
+    public void setMethodName(String methodName) {
+        this.methodName = methodName;
+    }
 
+    public String getMethodName() {
+        return methodName;
+    }
     public String getClassName() {
         return className;
     }
