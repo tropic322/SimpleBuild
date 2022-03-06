@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="com.kaa.simplebuild.CalculatorUtilTest" time="0.467" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="com.kaa.simplebuild.CalculatorUtilTest" time="0.348" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="14.0.2+12-46"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="C:\Program Files\NetBeans-12.6\netbeans\java\maven\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="14"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.6\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 clean install"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dmaven.ext.class.path=C:\Program Files\NetBeans-12.6\netbeans\java\maven-nblib\netbeans-eventspy.jar -Dfile.encoding=UTF-8 install"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-14.0.2"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -59,6 +59,6 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.kaa.simplebuild.CalculatorUtilTest" name="TestCreateCalculator" time="0.392"/>
-  <testcase classname="com.kaa.simplebuild.CalculatorUtilTest" name="TestGetCalculator" time="0.075"/>
+  <testcase classname="com.kaa.simplebuild.CalculatorUtilTest" name="TestCreateCalculator" time="0.342"/>
+  <testcase classname="com.kaa.simplebuild.CalculatorUtilTest" name="TestGetCalculator" time="0.006"/>
 </testsuite>

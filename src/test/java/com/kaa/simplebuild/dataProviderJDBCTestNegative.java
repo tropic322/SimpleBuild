@@ -20,11 +20,11 @@ import org.junit.Test;
  *
  * @author Alexandr
  */
-public class dataProviderJDBCTestNegative {
-    public dataProviderJDBCTestNegative() {
+public class DataProviderJDBCTestNegative {
+    public DataProviderJDBCTestNegative() {
     }
     
-    private static Logger log = LogManager.getLogger(dataProviderJDBCTestNegative.class);
+    private static Logger log = LogManager.getLogger(DataProviderJDBCTestNegative.class);
     DataProviderJDBC provider = new DataProviderJDBC();
     
     @Test
