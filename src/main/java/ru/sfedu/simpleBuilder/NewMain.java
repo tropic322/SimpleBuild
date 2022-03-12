@@ -33,7 +33,7 @@ public class NewMain {
         CalculatorUtil calculatorUtil = new CalculatorUtil();
         DataProviderCsv dc = new DataProviderCsv();
         //logger.debug(dc.getBuildingTemplateById(11));
-        /*    
+            
         if (args.length == 0){
             System.out.println("No date provider selected");
             //logger.error("No date provider selected");
@@ -284,7 +284,7 @@ public class NewMain {
             default:
                 logger.error("Error in choosing a method");
                 
-        }*/
+        }
 
 
 
