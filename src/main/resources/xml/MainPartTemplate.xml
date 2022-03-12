@@ -1,10 +1,9 @@
 <list>
-   <object class="entity.MainPartTemplate">
-      <ID>1</ID>
-      <NAME>asd</NAME>
-      <PRICEMULTIPLIER>1.0</PRICEMULTIPLIER>
-      <IDMATERIAL>1</IDMATERIAL>
+   <object class="ru.sfedu.simpleBuilder.model.MainPartTemplate">
+      <ID>1647096363672</ID>
+      <NAME>test2</NAME>
+      <PRICEMULTIPLIER>2.2</PRICEMULTIPLIER>
       <VERANDA>true</VERANDA>
-      <WINDOWS>3</WINDOWS>
+      <WINDOWS>2</WINDOWS>
    </object>
 </list>

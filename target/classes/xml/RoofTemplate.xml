@@ -1,25 +1,22 @@
 <list>
-   <object class="entity.RoofTemplate">
+   <object class="ru.sfedu.simpleBuilder.model.RoofTemplate">
       <ID>2</ID>
       <NAME>222</NAME>
-      <PRICEMULTIPLIER>2.0</PRICEMULTIPLIER>
-      <IDMATERIAL>2</IDMATERIAL>
+      <PRICEMULTIPLIER>2.0</PRICEMULTIPLIER>      
       <INSULATION>true</INSULATION>
       <PIPE>false</PIPE>
    </object>
-   <object class="entity.RoofTemplate">
+   <object class="ru.sfedu.simpleBuilder.model.RoofTemplate">
       <ID>3</ID>
       <NAME>222</NAME>
-      <PRICEMULTIPLIER>2.1</PRICEMULTIPLIER>
-      <IDMATERIAL>2</IDMATERIAL>
+      <PRICEMULTIPLIER>2.1</PRICEMULTIPLIER>      
       <INSULATION>true</INSULATION>
       <PIPE>false</PIPE>
    </object>
-   <object class="entity.RoofTemplate">
+   <object class="ru.sfedu.simpleBuilder.model.RoofTemplate">
       <ID>1644088507360</ID>
       <NAME>test2</NAME>
-      <PRICEMULTIPLIER>1.0</PRICEMULTIPLIER>
-      <IDMATERIAL>1</IDMATERIAL>
+      <PRICEMULTIPLIER>1.0</PRICEMULTIPLIER>      
       <INSULATION>true</INSULATION>
       <PIPE>true</PIPE>
    </object>

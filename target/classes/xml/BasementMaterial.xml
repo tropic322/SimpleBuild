@@ -1,5 +1,5 @@
 <list>
-   <object class="entity.BasementMaterial">
+   <object class="ru.sfedu.simpleBuilder.model.BasementMaterial">
       <ID>1</ID>
       <NAME>test2</NAME>
       <PRICE>1.0</PRICE>

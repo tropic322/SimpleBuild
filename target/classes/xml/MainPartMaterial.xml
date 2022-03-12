@@ -1,8 +1,14 @@
 <list>
-   <object class="entity.MainPartMaterial">
+   <object class="ru.sfedu.simpleBuilder.model.MainPartMaterial">
       <ID>1</ID>
       <NAME>test2</NAME>
       <PRICE>1.5</PRICE>
       <SOUND_TRANSMISSION>1.0</SOUND_TRANSMISSION>
+   </object>
+   <object class="ru.sfedu.simpleBuilder.model.MainPartMaterial">
+      <ID>2</ID>
+      <NAME>test3</NAME>
+      <PRICE>5.5</PRICE>
+      <SOUND_TRANSMISSION>3.0</SOUND_TRANSMISSION>
    </object>
 </list>

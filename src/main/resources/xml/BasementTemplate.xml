@@ -1,9 +1,8 @@
 <list>
-   <object class="entity.BasementTemplate">
+   <object class="ru.sfedu.simpleBuilder.model.BasementTemplate">
       <ID>1</ID>
       <NAME>test2</NAME>
       <PRICEMULTIPLIER>1.0</PRICEMULTIPLIER>
-      <IDMATERIAL>1</IDMATERIAL>
       <CELLAR>false</CELLAR>
    </object>
 </list>

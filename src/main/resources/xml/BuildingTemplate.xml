@@ -1,16 +1,22 @@
 <list>
-   <object class="entity.BuildingTemplate">
+   <object class="ru.sfedu.simpleBuilder.model.BuildingTemplate">
       <ID>123</ID>
       <NAME>test2</NAME>
       <IDROOFTEMPLATE>2</IDROOFTEMPLATE>
       <IDMAINPARTTEMPLATE>1</IDMAINPARTTEMPLATE>
       <IDBASEMENTTEMPLATE>1</IDBASEMENTTEMPLATE>
+      <IDROOFMATERIAL>2</IDROOFMATERIAL>
+      <IDMAINPARTMATERIAL>1</IDMAINPARTMATERIAL>
+      <IDBASEMENTMATERIAL>1</IDBASEMENTMATERIAL>
    </object>
-   <object class="entity.BuildingTemplate">
-      <ID>1644159184910</ID>
+   <object class="ru.sfedu.simpleBuilder.model.BuildingTemplate">
+      <ID>111</ID>
       <NAME>test</NAME>
       <IDROOFTEMPLATE>2</IDROOFTEMPLATE>
       <IDMAINPARTTEMPLATE>1</IDMAINPARTTEMPLATE>
       <IDBASEMENTTEMPLATE>1</IDBASEMENTTEMPLATE>
+      <IDROOFMATERIAL>2</IDROOFMATERIAL>
+      <IDMAINPARTMATERIAL>2</IDMAINPARTMATERIAL>
+      <IDBASEMENTMATERIAL>1</IDBASEMENTMATERIAL>
    </object>
 </list>
